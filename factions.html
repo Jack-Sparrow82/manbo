@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>群星势力 · 星穹世界观图鉴</title>
+<meta name="description" content="20 个群星势力考据：纯美骑士团、药王秘传、求药使、仙舟联盟、星核猎手等，并附代表人物与立绘。">
+<link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+</head>
+<body data-page="factions">
+
+<canvas id="starfield" aria-hidden="true"></canvas>
+<div class="nebula" aria-hidden="true"></div>
+
+<header class="topbar" id="topbar">
+  <a class="brand" href="index.html">
+    <span class="brand-mark">✦</span>
+    <span class="brand-text"><b>星穹图鉴</b><i>THE ASTRAL EXPRESS ARCHIVE</i></span>
+  </a>
+  <nav class="nav" id="nav">
+    <a href="index.html" class="nav-link" data-page="index">主页</a>
+    <a href="cosmos.html" class="nav-link" data-page="cosmos">宇宙本源</a>
+    <a href="aeons.html" class="nav-link" data-page="aeons">星神命途</a>
+    <a href="worlds.html" class="nav-link" data-page="worlds">开拓航图</a>
+    <a href="factions.html" class="nav-link" data-page="factions">群星势力</a>
+    <a href="characters.html" class="nav-link" data-page="characters">人物图鉴</a>
+    <a href="glossary.html" class="nav-link" data-page="glossary">术语辞典</a>
+  </nav>
+  <div class="topbar-right">
+    <span class="version-tag">资料更新至 4.6</span>
+    <button class="menu-btn" id="menuBtn" aria-label="打开菜单"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main>
+
+<section class="page-hero">
+  <div class="page-hero-inner">
+    <div class="page-crumb"><a href="index.html">主页</a><span>/</span><a href="factions.html">04 群星势力</a></div>
+    <div class="sec-kicker">FACTIONS OF THE STAR SEA</div>
+    <h1 class="page-title">群星势力</h1>
+    <p class="page-desc">星海从不寂静。各方阵营以自己信奉的理念为名，合作、交易、猜忌，也兵戎相见。</p>
+    <div class="page-hero-meta"><span>CHAPTER 04 / 06</span><span>20 个阵营 · 每个都附代表人物</span></div>
+  </div>
+  <img class="page-hero-art" src="assets/aeons/preservation.webp" alt="存护星神「克里珀」的官方画像">
+</section>
+
+<section class="section sub">
+  <div class="sub-head reveal">
+    <div class="sub-kicker">WHO HOLDS THE BANNER</div>
+    <h2>谁在举旗，谁在旗下</h2>
+    <p>凡人对星神意愿的揣测本是徒劳，但怀有共同信条的人聚集成众，便成了「派系」。除列车、公司、仙舟这些熟面孔，本章也补上了纯美骑士团、药王秘传与求药使等偏设定的阵营，并逐一列出代表人物。带立绘的头像可以点开查看资料。</p>
+  </div>
+  <div class="filter-bar reveal" id="factionFilter"></div>
+  <div class="faction-grid" id="factionGrid"></div>
+  <div class="char-count" id="factionCount"></div>
+  <div class="next-hint reveal">
+    <span>下一章</span>
+    <p>想单独翻看这些面孔？<a href="characters.html">去「人物图鉴」按世界筛选 →</a></p>
+  </div>
+</section>
+
+<nav class="pager">
+  <a class="pager-link" href="worlds.html"><span>← 上一页</span><b>开拓航图</b></a>
+  <a class="pager-home" href="index.html">返回主页 ↑</a>
+  <a class="pager-link next" href="characters.html"><span>下一页 →</span><b>人物图鉴</b></a>
+</nav>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-main">
+    <div class="footer-brand"><span>✦</span> 星穹世界观图鉴</div>
+    <p>非官方粉丝向资料整理，仅供世界观科普与交流使用。《崩坏：星穹铁道》及全部角色、设定、图像的著作权归上海米哈游海渊城科技有限公司所有。</p>
+    <p class="footer-src">资料参考：<a href="https://sr.mihoyo.com/" target="_blank" rel="noopener">游戏官网</a> · <a href="https://wiki.biligame.com/sr/" target="_blank" rel="noopener">BWIKI</a> · <a href="https://zh.moegirl.org.cn/" target="_blank" rel="noopener">萌娘百科</a>　｜　角色立绘、命途图标与星神画像：<a href="https://github.com/Mar-7th/StarRailRes" target="_blank" rel="noopener">StarRailRes 开源素材库</a><br>站内页面间链接与图片均使用相对路径，可直接整目录归档、离线浏览。</p>
+    <div class="footer-links">
+      <a href="index.html">主页</a><a href="cosmos.html">宇宙本源</a><a href="aeons.html">星神命途</a>
+      <a href="worlds.html">开拓航图</a><a href="factions.html">群星势力</a><a href="characters.html">人物图鉴</a><a href="glossary.html">术语辞典</a>
+    </div>
+  </div>
+  <div class="footer-meta"><span>WORLDVIEW ARCHIVE · 7 PAGES</span><span>VER 4.6 · 2026</span></div>
+</footer>
+
+<button id="backTop" class="back-top" aria-label="返回顶部">↑</button>
+<script src="script.js"></script>
+</body>
+</html>

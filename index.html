@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>星穹世界观图鉴 · 愿此行，终抵群星</title>
+<meta name="description" content="《崩坏：星穹铁道》世界观整理：宇宙本源、星神与命途、开拓航图、群星势力、人物图鉴与术语辞典。共 7 个页面，全部使用相对路径互链。">
+<link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+</head>
+<body data-page="index">
+
+<canvas id="starfield" aria-hidden="true"></canvas>
+<div class="nebula" aria-hidden="true"></div>
+
+<!-- ============ 顶部导航（全站共用，相对路径） ============ -->
+<header class="topbar" id="topbar">
+  <a class="brand" href="index.html">
+    <span class="brand-mark">✦</span>
+    <span class="brand-text"><b>星穹图鉴</b><i>THE ASTRAL EXPRESS ARCHIVE</i></span>
+  </a>
+  <nav class="nav" id="nav">
+    <a href="index.html" class="nav-link" data-page="index">主页</a>
+    <a href="cosmos.html" class="nav-link" data-page="cosmos">宇宙本源</a>
+    <a href="aeons.html" class="nav-link" data-page="aeons">星神命途</a>
+    <a href="worlds.html" class="nav-link" data-page="worlds">开拓航图</a>
+    <a href="factions.html" class="nav-link" data-page="factions">群星势力</a>
+    <a href="characters.html" class="nav-link" data-page="characters">人物图鉴</a>
+    <a href="glossary.html" class="nav-link" data-page="glossary">术语辞典</a>
+  </nav>
+  <div class="topbar-right">
+    <span class="version-tag">资料更新至 4.6</span>
+    <button class="menu-btn" id="menuBtn" aria-label="打开菜单"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="hero">
+  <div class="hero-ring ring-a" aria-hidden="true"></div>
+  <div class="hero-ring ring-b" aria-hidden="true"></div>
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <div class="eyebrow"><span class="eyebrow-line"></span> HONKAI: STAR RAIL · WORLDVIEW ARCHIVE</div>
+      <h1 class="hero-title">愿此行，<br><em>终抵群星</em></h1>
+      <p class="hero-sub">这片星海由无数世界与理念织就。<br>一列停不下来的列车、一群自称「无名客」的旅人，<br>正沿着已陨星神铺下的银轨，驶向宇宙最深的谜题。</p>
+      <div class="hero-actions">
+        <a href="cosmos.html" class="btn btn-primary">开启开拓之旅 <span>→</span></a>
+        <a href="aeons.html" class="btn btn-ghost">看看星神画像</a>
+      </div>
+      <div class="hero-note">※ 本页为非官方粉丝向世界观整理 · 全站 7 页</div>
+    </div>
+    <div class="hero-art">
+      <div class="hero-glow"></div>
+      <img src="assets/hero/1510.webp" alt="姬子·启行 角色立绘" class="hero-figure" id="heroFigure">
+      <div class="hero-badge"><span>✦</span><div><b>星穹列车</b><i>开拓命途 · 无名客</i></div></div>
+      <div class="hero-caption">HIMEKO · NOVA</div>
+    </div>
+  </div>
+  <div class="hero-stats">
+    <div class="stat"><b>07</b><span>站内页面</span></div>
+    <div class="stat"><b>14</b><span>官方星神画像</span></div>
+    <div class="stat"><b>54</b><span>收录角色立绘</span></div>
+    <div class="stat"><b>20</b><span>群星势力考据</span></div>
+  </div>
+  <a class="scroll-hint" href="#chapters"><span>SCROLL</span><i></i></a>
+</section>
+
+<!-- ============ 章节导览 ============ -->
+<section class="section" id="chapters">
+  <div class="section-head reveal">
+    <div class="sec-num">00</div>
+    <div>
+      <div class="sec-kicker">SITE MAP / SIX CHAPTERS</div>
+      <h2 class="sec-title">选择你的下一站</h2>
+      <p class="sec-desc">主页是这份图鉴的目录。六个章节各自独立成页，点击任意一张车票即可跳转；所有链接均为相对路径，整站打包后依然能完整浏览。</p>
+    </div>
+  </div>
+
+  <div class="chapter-grid">
+    <a class="chapter-card reveal" href="cosmos.html">
+      <div class="chapter-num">01</div>
+      <div class="chapter-art"><img src="assets/paths/Explore.webp" alt="开拓命途图标"></div>
+      <div class="chapter-body">
+        <div class="chapter-kicker">THE ORIGIN OF THE COSMOS</div>
+        <h3>宇宙的本源</h3>
+        <p>虚数之树与量子之海、星神与命途、「万界之癌」星核，以及以挥锤为刻度的琥珀纪。</p>
+        <span class="chapter-go">进入章节 →</span>
+      </div>
+    </a>
+    <a class="chapter-card reveal" href="aeons.html">
+      <div class="chapter-num">02</div>
+      <div class="chapter-art aeon"><img src="assets/aeons/elation.webp" alt="阿哈 星神画像"></div>
+      <div class="chapter-body">
+        <div class="chapter-kicker">AEONS AND THEIR PATHS</div>
+        <h3>星神 · 命途</h3>
+        <p>14 位官方已公布画像的星神、10 条主要命途，以及那些已经陨落或失踪的旧日理念。</p>
+        <span class="chapter-go">进入章节 →</span>
+      </div>
+    </a>
+    <a class="chapter-card reveal" href="worlds.html">
+      <div class="chapter-num">03</div>
+      <div class="chapter-art"><img src="assets/characters/1510.webp" alt="姬子·启行 立绘"></div>
+      <div class="chapter-body">
+        <div class="chapter-kicker">THE TRAILBLAZE ROUTE</div>
+        <h3>开拓航图</h3>
+        <p>从黑塔空间站到二相乐园，沿银轨停靠的六处世界，以及每一站的相遇与告别。</p>
+        <span class="chapter-go">进入章节 →</span>
+      </div>
+    </a>
+    <a class="chapter-card reveal" href="factions.html">
+      <div class="chapter-num">04</div>
+      <div class="chapter-art aeon"><img src="assets/aeons/preservation.webp" alt="克里珀 星神画像"></div>
+      <div class="chapter-body">
+        <div class="chapter-kicker">FACTIONS OF THE STAR SEA</div>
+        <h3>群星势力</h3>
+        <p>纯美骑士团、药王秘传、求药使……20 个阵营，每个都附上代表人物与立绘。</p>
+        <span class="chapter-go">进入章节 →</span>
+      </div>
+    </a>
+    <a class="chapter-card reveal" href="characters.html">
+      <div class="chapter-num">05</div>
+      <div class="chapter-art"><img src="assets/characters/1001.webp" alt="三月七 立绘"></div>
+      <div class="chapter-body">
+        <div class="chapter-kicker">PASSENGERS OF THE STARS</div>
+        <h3>人物图鉴</h3>
+        <p>54 位旅途中相遇的面孔，按世界筛选，点开卡片就能读到他们从哪颗星来。</p>
+        <span class="chapter-go">进入章节 →</span>
+      </div>
+    </a>
+    <a class="chapter-card reveal" href="glossary.html">
+      <div class="chapter-num">06</div>
+      <div class="chapter-art aeon"><img src="assets/aeons/erudition.webp" alt="博识尊 星神画像"></div>
+      <div class="chapter-body">
+        <div class="chapter-kicker">GLOSSARY</div>
+        <h3>术语辞典</h3>
+        <p>无名客、令使、永劫回归、幻月游戏……读懂星海，先读懂这些词。</p>
+        <span class="chapter-go">进入章节 →</span>
+      </div>
+    </a>
+  </div>
+
+  <div class="sitemap-strip reveal">
+    <div class="sitemap-label">整站文件结构 <span>／ 全部相对路径</span></div>
+    <div class="sitemap-links">
+      <a href="index.html" class="active">index.html <b>主页</b></a>
+      <a href="cosmos.html">cosmos.html <b>宇宙本源</b></a>
+      <a href="aeons.html">aeons.html <b>星神命途</b></a>
+      <a href="worlds.html">worlds.html <b>开拓航图</b></a>
+      <a href="factions.html">factions.html <b>群星势力</b></a>
+      <a href="characters.html">characters.html <b>人物图鉴</b></a>
+      <a href="glossary.html">glossary.html <b>术语辞典</b></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 精选画像 ============ -->
+<section class="section slim" id="featured">
+  <div class="section-head reveal">
+    <div class="sec-num">✦</div>
+    <div>
+      <div class="sec-kicker">OFFICIAL AEON PORTRAITS</div>
+      <h2 class="sec-title">抬头看看星神</h2>
+      <p class="sec-desc">游戏内「模拟宇宙」图鉴公开了 14 位星神的官方画像。这里先放四位，完整画廊在<a href="aeons.html">「星神 · 命途」</a>页。</p>
+    </div>
+  </div>
+  <div class="featured-row">
+    <a class="featured-card reveal" href="aeons.html"><img src="assets/aeons/destruction.webp" alt="纳努克 画像"><div><b>纳努克</b><span>毁灭</span></div></a>
+    <a class="featured-card reveal" href="aeons.html"><img src="assets/aeons/abundance.webp" alt="药师 画像"><div><b>药师</b><span>丰饶</span></div></a>
+    <a class="featured-card reveal" href="aeons.html"><img src="assets/aeons/remembrance.webp" alt="浮黎 画像"><div><b>浮黎</b><span>记忆</span></div></a>
+    <a class="featured-card reveal" href="aeons.html"><img src="assets/aeons/harmony.webp" alt="希佩 画像"><div><b>希佩</b><span>同谐</span></div></a>
+  </div>
+</section>
+
+<!-- ============ 尾声 ============ -->
+<section class="outro">
+  <div class="outro-art">
+    <div class="outro-glow"></div>
+  </div>
+  <div class="outro-copy">
+    <div class="outro-star">✦</div>
+    <p class="outro-line">「即使同行的人们面朝不同的方向，<br>他们仍处于同一片星空下。」</p>
+    <p class="outro-sub">下一站，仍在银轨的尽头。</p>
+    <a href="cosmos.html" class="btn btn-ghost">从第一章开始 →</a>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-main">
+    <div class="footer-brand"><span>✦</span> 星穹世界观图鉴</div>
+    <p>非官方粉丝向资料整理，仅供世界观科普与交流使用。《崩坏：星穹铁道》及全部角色、设定、图像的著作权归上海米哈游海渊城科技有限公司所有。</p>
+    <p class="footer-src">资料参考：<a href="https://sr.mihoyo.com/" target="_blank" rel="noopener">游戏官网</a> · <a href="https://wiki.biligame.com/sr/" target="_blank" rel="noopener">BWIKI</a> · <a href="https://zh.moegirl.org.cn/" target="_blank" rel="noopener">萌娘百科</a>　｜　角色立绘、命途图标与星神画像：<a href="https://github.com/Mar-7th/StarRailRes" target="_blank" rel="noopener">StarRailRes 开源素材库</a><br>站内页面间链接与图片均使用相对路径，可直接整目录归档、离线浏览。</p>
+    <div class="footer-links">
+      <a href="index.html">主页</a><a href="cosmos.html">宇宙本源</a><a href="aeons.html">星神命途</a>
+      <a href="worlds.html">开拓航图</a><a href="factions.html">群星势力</a><a href="characters.html">人物图鉴</a><a href="glossary.html">术语辞典</a>
+    </div>
+  </div>
+  <div class="footer-meta"><span>WORLDVIEW ARCHIVE · 7 PAGES</span><span>VER 4.6 · 2026</span></div>
+</footer>
+
+<button id="backTop" class="back-top" aria-label="返回顶部">↑</button>
+<script src="script.js"></script>
+</body>
+</html>
