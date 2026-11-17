@@ -6,7 +6,36 @@
 <title>群星势力 · 星穹世界观图鉴</title>
 <meta name="description" content="20 个群星势力考据：纯美骑士团、药王秘传、求药使、仙舟联盟、星核猎手等，并附代表人物与立绘。">
 <link rel="stylesheet" href="styles.css">
-  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+<script>
+/* 图片路径兼容层：正常结构读 assets/ 子目录；若上传时图片被平铺到仓库根目录，自动回退 */
+(function(){
+  var FLAT = {
+    'assets/hero/1510.webp':'1510 (1).webp',
+    'assets/paths/Abundance.webp':'Abundance (2).webp',
+    'assets/paths/Destruction.webp':'Destruction (3).webp',
+    'assets/paths/Elation.webp':'Elation (4).webp',
+    'assets/paths/Erudition.webp':'Erudition (5).webp',
+    'assets/paths/Harmony.webp':'Harmony (6).webp',
+    'assets/paths/Hunt.webp':'Hunt (7).webp',
+    'assets/paths/Nihility.webp':'Nihility (8).webp',
+    'assets/paths/Preservation.webp':'Preservation (9).webp',
+    'assets/paths/Remembrance.webp':'Remembrance (10).webp'
+  };
+  function toFlat(src){
+    if (FLAT[src]) return FLAT[src];
+    var m = /^assets\/[^/]+\/(.+)$/.exec(src || '');
+    return m ? m[1] : null;
+  }
+  document.addEventListener('error', function(e){
+    var img = e.target;
+    if (!img || img.tagName !== 'IMG' || img.getAttribute('data-flat-tried')) return;
+    img.setAttribute('data-flat-tried','1');
+    var f = toFlat(img.getAttribute('src') || '');
+    if (f) img.src = f;
+  }, true);
+})();
+</script>
 </head>
 <body data-page="factions">
 
