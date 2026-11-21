@@ -6,36 +6,7 @@
 <title>群星势力 · 星穹世界观图鉴</title>
 <meta name="description" content="20 个群星势力考据：纯美骑士团、药王秘传、求药使、仙舟联盟、星核猎手等，并附代表人物与立绘。">
 <link rel="stylesheet" href="styles.css">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-<script>
-/* 图片路径兼容层：正常结构读 assets/ 子目录；若上传时图片被平铺到仓库根目录，自动回退 */
-(function(){
-  var FLAT = {
-    'assets/hero/1510.webp':'1510 (1).webp',
-    'assets/paths/Abundance.webp':'Abundance (2).webp',
-    'assets/paths/Destruction.webp':'Destruction (3).webp',
-    'assets/paths/Elation.webp':'Elation (4).webp',
-    'assets/paths/Erudition.webp':'Erudition (5).webp',
-    'assets/paths/Harmony.webp':'Harmony (6).webp',
-    'assets/paths/Hunt.webp':'Hunt (7).webp',
-    'assets/paths/Nihility.webp':'Nihility (8).webp',
-    'assets/paths/Preservation.webp':'Preservation (9).webp',
-    'assets/paths/Remembrance.webp':'Remembrance (10).webp'
-  };
-  function toFlat(src){
-    if (FLAT[src]) return FLAT[src];
-    var m = /^assets\/[^/]+\/(.+)$/.exec(src || '');
-    return m ? m[1] : null;
-  }
-  document.addEventListener('error', function(e){
-    var img = e.target;
-    if (!img || img.tagName !== 'IMG' || img.getAttribute('data-flat-tried')) return;
-    img.setAttribute('data-flat-tried','1');
-    var f = toFlat(img.getAttribute('src') || '');
-    if (f) img.src = f;
-  }, true);
-})();
-</script>
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
 </head>
 <body data-page="factions">
 
@@ -76,14 +47,331 @@
 </section>
 
 <section class="section sub">
+  <article class="reading">
+  <h2>本章速览：信仰如何长成组织</h2>
+<p>如果说星神给出的是方向，那么<strong>势力</strong>就是把方向走成日常的一群人。同一条命途之下，可能同时存在彼此敌对的阵营；一个组织的名字，往往就写明了它相信什么、又愿意为此付出什么。理解阵营立场，比记住人物名单更能看懂剧情冲突。</p>
+<p>本页整理 <span class="r-key">20 个势力</span>，包括星穹列车、星核猎手、星际和平公司、仙舟联盟、反物质军团，以及纯美骑士团、药王秘传、求药使等较冷门但设定完整的团体。每张卡片给出简介、所信奉的命途与代表人物，可用顶部按钮按命途筛选；没有具名人物的团体（如求药使）会如实注明，不做臆测填充。</p>
+<p>势力卡片中的人物头像可点击查看详细资料。全部文字为原创整理，人物与星神图像仅作识别辅助，即使不加载图片，正文也足以说明各势力的来历与关系。</p>
+</article>
   <div class="sub-head reveal">
     <div class="sub-kicker">WHO HOLDS THE BANNER</div>
     <h2>谁在举旗，谁在旗下</h2>
     <p>凡人对星神意愿的揣测本是徒劳，但怀有共同信条的人聚集成众，便成了「派系」。除列车、公司、仙舟这些熟面孔，本章也补上了纯美骑士团、药王秘传与求药使等偏设定的阵营，并逐一列出代表人物。带立绘的头像可以点开查看资料。</p>
   </div>
-  <div class="filter-bar reveal" id="factionFilter"></div>
-  <div class="faction-grid" id="factionGrid"></div>
-  <div class="char-count" id="factionCount"></div>
+  <div class="filter-bar " id="factionFilter" data-static="1"><button class="filter-btn active" data-fpath="all">全部势力 <span style="opacity:.55">20</span></button><button class="filter-btn" data-fpath="开拓">开拓 <span style="opacity:.55">1</span></button><button class="filter-btn" data-fpath="预言">预言 <span style="opacity:.55">1</span></button><button class="filter-btn" data-fpath="存护">存护 <span style="opacity:.55">2</span></button><button class="filter-btn" data-fpath="巡猎">巡猎 <span style="opacity:.55">3</span></button><button class="filter-btn" data-fpath="丰饶">丰饶 <span style="opacity:.55">3</span></button><button class="filter-btn" data-fpath="纯美">纯美 <span style="opacity:.55">1</span></button><button class="filter-btn" data-fpath="毁灭">毁灭 <span style="opacity:.55">1</span></button><button class="filter-btn" data-fpath="同谐">同谐 <span style="opacity:.55">1</span></button><button class="filter-btn" data-fpath="欢愉">欢愉 <span style="opacity:.55">1</span></button><button class="filter-btn" data-fpath="智识">智识 <span style="opacity:.55">2</span></button><button class="filter-btn" data-fpath="记忆">记忆 <span style="opacity:.55">1</span></button><button class="filter-btn" data-fpath="虚无">虚无 <span style="opacity:.55">1</span></button><button class="filter-btn" data-fpath="神秘">神秘 <span style="opacity:.55">1</span></button><button class="filter-btn" data-fpath="繁育">繁育 <span style="opacity:.55">1</span></button></div>
+  <div class="faction-grid" id="factionGrid" data-static="1">
+    <article class="faction-card  in" style="transition-delay:0ms">
+      <div class="faction-sigil">✦</div>
+      <div class="faction-body">
+        <h3>星穹列车 · 无名客</h3>
+        <div class="faction-path">信奉 / 开拓</div>
+        <p>阿基维利陨落后继承其遗志的旅人。列车以逝去星神的心脏为源动力，沿银轨修补被「万界之癌」污染的航路。</p>
+        <div class="faction-people">
+          <div class="fp-label">代表人物</div>
+          <div class="fp-list"><button class="person-chip" data-person="1003" title="查看 姬子 的资料">
+      <span class="person-av"><img src="assets/characters/1003.webp" alt="" loading="lazy"></span><span>姬子</span></button><button class="person-chip" data-person="1002" title="查看 丹恒 的资料">
+      <span class="person-av"><img src="assets/characters/1002.webp" alt="" loading="lazy"></span><span>丹恒</span></button><button class="person-chip" data-person="1001" title="查看 三月七 的资料">
+      <span class="person-av"><img src="assets/characters/1001.webp" alt="" loading="lazy"></span><span>三月七</span></button><button class="person-chip" data-person="1004" title="查看 瓦尔特 的资料">
+      <span class="person-av"><img src="assets/characters/1004.webp" alt="" loading="lazy"></span><span>瓦尔特</span></button></div>
+          
+        </div>
+      </div>
+    </article>
+    <article class="faction-card  in" style="transition-delay:45ms">
+      <div class="faction-sigil">◉</div>
+      <div class="faction-body">
+        <h3>星核猎手</h3>
+        <div class="faction-path">信奉 / 预言</div>
+        <p>由「命运的奴隶」艾利欧召集的神秘小队，依预言行动。手段常与列车相左，却同在奔向那个「最好的结局」。</p>
+        <div class="faction-people">
+          <div class="fp-label">代表人物</div>
+          <div class="fp-list"><button class="person-chip" data-person="1005" title="查看 卡芙卡 的资料">
+      <span class="person-av"><img src="assets/characters/1005.webp" alt="" loading="lazy"></span><span>卡芙卡</span></button><button class="person-chip" data-person="1006" title="查看 银狼 的资料">
+      <span class="person-av"><img src="assets/characters/1006.webp" alt="" loading="lazy"></span><span>银狼</span></button><button class="person-chip" data-person="1205" title="查看 刃 的资料">
+      <span class="person-av"><img src="assets/characters/1205.webp" alt="" loading="lazy"></span><span>刃</span></button><button class="person-chip" data-person="1310" title="查看 流萤 的资料">
+      <span class="person-av"><img src="assets/characters/1310.webp" alt="" loading="lazy"></span><span>流萤</span></button><span class="person-chip static"><span class="person-av txt">✧</span><span>艾利欧</span></span></div>
+          
+        </div>
+      </div>
+    </article>
+    <article class="faction-card  in" style="transition-delay:90ms">
+      <div class="faction-sigil">◈</div>
+      <div class="faction-body">
+        <h3>星际和平公司</h3>
+        <div class="faction-path">信奉 / 存护</div>
+        <p>以信用点与契约维系的宇宙级财阀，为克里珀搜罗筑墙材料，也顺手经营、重建、收购着无数颗星球。</p>
+        <div class="faction-people">
+          <div class="fp-label">代表人物</div>
+          <div class="fp-list"><button class="person-chip" data-person="1304" title="查看 砂金 的资料">
+      <span class="person-av"><img src="assets/characters/1304.webp" alt="" loading="lazy"></span><span>砂金</span></button><button class="person-chip" data-person="1314" title="查看 翡翠 的资料">
+      <span class="person-av"><img src="assets/characters/1314.webp" alt="" loading="lazy"></span><span>翡翠</span></button><button class="person-chip" data-person="1503" title="查看 真珠 的资料">
+      <span class="person-av"><img src="assets/characters/1503.webp" alt="" loading="lazy"></span><span>真珠</span></button><button class="person-chip" data-person="1112" title="查看 托帕&amp;账账 的资料">
+      <span class="person-av"><img src="assets/characters/1112.webp" alt="" loading="lazy"></span><span>托帕&amp;账账</span></button></div>
+          
+        </div>
+      </div>
+    </article>
+    <article class="faction-card  in" style="transition-delay:135ms">
+      <div class="faction-sigil">▤</div>
+      <div class="faction-body">
+        <h3>筑城者</h3>
+        <div class="faction-path">信奉 / 存护</div>
+        <p>崇拜克里珀的人们效仿祂筑起环护星球的城墙，相信星神的行为预示银河终将迎来的灾祸。贝洛伯格七百年的高墙，即其最具体的形状。</p>
+        <div class="faction-people">
+          <div class="fp-label">代表人物</div>
+          <div class="fp-list"><button class="person-chip" data-person="1101" title="查看 布洛妮娅 的资料">
+      <span class="person-av"><img src="assets/characters/1101.webp" alt="" loading="lazy"></span><span>布洛妮娅</span></button><button class="person-chip" data-person="1104" title="查看 杰帕德 的资料">
+      <span class="person-av"><img src="assets/characters/1104.webp" alt="" loading="lazy"></span><span>杰帕德</span></button><span class="person-chip static"><span class="person-av txt">✧</span><span>可可利亚</span></span></div>
+          
+        </div>
+      </div>
+    </article>
+    <article class="faction-card  in" style="transition-delay:180ms">
+      <div class="faction-sigil">⌖</div>
+      <div class="faction-body">
+        <h3>仙舟联盟 · 云骑军</h3>
+        <div class="faction-path">信奉 / 巡猎</div>
+        <p>六艘巨型星舰组成的联盟，以丰饶孽物为航标、以断绝不死污染为己任。云骑军是其锋刃，帝弓七天将各领一舟。</p>
+        <div class="faction-people">
+          <div class="fp-label">代表人物</div>
+          <div class="fp-list"><button class="person-chip" data-person="1204" title="查看 景元 的资料">
+      <span class="person-av"><img src="assets/characters/1204.webp" alt="" loading="lazy"></span><span>景元</span></button><button class="person-chip" data-person="1220" title="查看 飞霄 的资料">
+      <span class="person-av"><img src="assets/characters/1220.webp" alt="" loading="lazy"></span><span>飞霄</span></button><button class="person-chip" data-person="1207" title="查看 驭空 的资料">
+      <span class="person-av"><img src="assets/characters/1207.webp" alt="" loading="lazy"></span><span>驭空</span></button><button class="person-chip" data-person="1206" title="查看 素裳 的资料">
+      <span class="person-av"><img src="assets/characters/1206.webp" alt="" loading="lazy"></span><span>素裳</span></button><button class="person-chip" data-person="1502" title="查看 爻光 的资料">
+      <span class="person-av"><img src="assets/characters/1502.webp" alt="" loading="lazy"></span><span>爻光</span></button></div>
+          
+        </div>
+      </div>
+    </article>
+    <article class="faction-card  in" style="transition-delay:225ms">
+      <div class="faction-sigil">⚖</div>
+      <div class="faction-body">
+        <h3>十王司</h3>
+        <div class="faction-path">信奉 / 巡猎</div>
+        <p>仙舟掌审判与幽囚的机构，判官专司缉拿长生重犯，也看管幽囚狱最深处那些不该醒来的东西。</p>
+        <div class="faction-people">
+          <div class="fp-label">代表人物</div>
+          <div class="fp-list"><button class="person-chip" data-person="1214" title="查看 雪衣 的资料">
+      <span class="person-av"><img src="assets/characters/1214.webp" alt="" loading="lazy"></span><span>雪衣</span></button><button class="person-chip" data-person="1215" title="查看 寒鸦 的资料">
+      <span class="person-av"><img src="assets/characters/1215.webp" alt="" loading="lazy"></span><span>寒鸦</span></button><button class="person-chip" data-person="1217" title="查看 藿藿 的资料">
+      <span class="person-av"><img src="assets/characters/1217.webp" alt="" loading="lazy"></span><span>藿藿</span></button></div>
+          
+        </div>
+      </div>
+    </article>
+    <article class="faction-card  in" style="transition-delay:270ms">
+      <div class="faction-sigil">➶</div>
+      <div class="faction-body">
+        <h3>巡海游侠</h3>
+        <div class="faction-path">信奉 / 巡猎</div>
+        <p>自发组成的义侠团体，相信宇宙的善良与公义须以个人的行为伸张。曾刺杀绝灭大君「诛罗」，后与天才俱乐部#64「原始博士」结仇而淡出银河。</p>
+        <div class="faction-people">
+          <div class="fp-label">代表人物</div>
+          <div class="fp-list"><button class="person-chip" data-person="1308" title="查看 黄泉 的资料">
+      <span class="person-av"><img src="assets/characters/1308.webp" alt="" loading="lazy"></span><span>黄泉</span></button><button class="person-chip" data-person="1315" title="查看 波提欧 的资料">
+      <span class="person-av"><img src="assets/characters/1315.webp" alt="" loading="lazy"></span><span>波提欧</span></button><button class="person-chip" data-person="1317" title="查看 乱破 的资料">
+      <span class="person-av"><img src="assets/characters/1317.webp" alt="" loading="lazy"></span><span>乱破</span></button></div>
+          
+        </div>
+      </div>
+    </article>
+    <article class="faction-card  in" style="transition-delay:270ms">
+      <div class="faction-sigil">❀</div>
+      <div class="faction-body">
+        <h3>丹鼎司</h3>
+        <div class="faction-path">信奉 / 丰饶</div>
+        <p>仙舟掌医药与生命研究的官署，开设医馆、培育丹士医士。它救人，也研究长生，因此始终是药王秘传最想渗透的地方。</p>
+        <div class="faction-people">
+          <div class="fp-label">代表人物</div>
+          <div class="fp-list"><button class="person-chip" data-person="1211" title="查看 白露 的资料">
+      <span class="person-av"><img src="assets/characters/1211.webp" alt="" loading="lazy"></span><span>白露</span></button><button class="person-chip" data-person="1222" title="查看 灵砂 的资料">
+      <span class="person-av"><img src="assets/characters/1222.webp" alt="" loading="lazy"></span><span>灵砂</span></button><button class="person-chip" data-person="1218" title="查看 椒丘 的资料">
+      <span class="person-av"><img src="assets/characters/1218.webp" alt="" loading="lazy"></span><span>椒丘</span></button></div>
+          
+        </div>
+      </div>
+    </article>
+    <article class="faction-card  in" style="transition-delay:270ms">
+      <div class="faction-sigil">☤</div>
+      <div class="faction-body">
+        <h3>药王秘传</h3>
+        <div class="faction-path">信奉 / 丰饶</div>
+        <p>潜伏在仙舟内部的丰饶秘密教团，主张借药师之力重塑「承露天人」之躯、摆脱人性重负。魁首丹枢以丹士长身份布局三十年，是罗浮内乱的源头；绝灭大君幻胧则在幕后推了一把。</p>
+        <div class="faction-people">
+          <div class="fp-label">代表人物</div>
+          <div class="fp-list"><span class="person-chip static"><span class="person-av txt">✧</span><span>丹枢 · 魁首</span></span><span class="person-chip static"><span class="person-av txt">✧</span><span>绿芙蓉</span></span><button class="person-chip" data-person="1203" title="查看 罗刹 · 存疑 的资料">
+      <span class="person-av"><img src="assets/characters/1203.webp" alt="" loading="lazy"></span><span>罗刹 · 存疑</span></button><span class="person-chip static"><span class="person-av txt">✧</span><span>幻胧 · 幕后</span></span></div>
+          
+        </div>
+      </div>
+    </article>
+    <article class="faction-card  in" style="transition-delay:270ms">
+      <div class="faction-sigil">✧</div>
+      <div class="faction-body">
+        <h3>求药使</h3>
+        <div class="faction-path">信奉 / 丰饶</div>
+        <p>为摆脱寿数之苦，诸多世界派出虔信丰饶的使徒横渡星海，向药师求取长生良药。他们中有亲王显贵，也有孤身上路的浪人；仙舟联盟的前身，正是其中一支求药舰队。</p>
+        <div class="faction-people">
+          <div class="fp-label">代表人物</div>
+          <div class="fp-list"><span class="person-chip static"><span class="person-av txt">✧</span><span>仙舟先民</span></span><span class="person-chip static"><span class="person-av txt">✧</span><span>诸界使徒</span></span><button class="person-chip" data-aeon-person="abundance" title="查看星神画像">
+      <span class="person-av aeon"><img src="assets/aeons/abundance.webp" alt="" loading="lazy"></span><span>药师 · 求药对象</span></button></div>
+          <div class="fp-note">※ 该派系以群体形象出现，游戏中无具名代表人物。</div>
+        </div>
+      </div>
+    </article>
+    <article class="faction-card" style="transition-delay:270ms">
+      <div class="faction-sigil">✵</div>
+      <div class="faction-body">
+        <h3>纯美骑士团</h3>
+        <div class="faction-path">信奉 / 纯美</div>
+        <p>狂热赞美伊德莉拉之美的人们中，身手不凡者组成的骑士团。崇尚古典美与骑士道，相信唯有淬炼无瑕的肉体、智慧与精神，才有资格自称星神的崇拜者；伊德莉拉失踪后逐渐分崩离析。</p>
+        <div class="faction-people">
+          <div class="fp-label">代表人物</div>
+          <div class="fp-list"><button class="person-chip" data-person="1302" title="查看 银枝 的资料">
+      <span class="person-av"><img src="assets/characters/1302.webp" alt="" loading="lazy"></span><span>银枝</span></button><span class="person-chip static"><span class="person-av txt">✧</span><span>伊德莉拉 · 星神</span></span><span class="person-chip static"><span class="person-av txt">✧</span><span>揽镜人</span></span></div>
+          
+        </div>
+      </div>
+    </article>
+    <article class="faction-card" style="transition-delay:270ms">
+      <div class="faction-sigil">✷</div>
+      <div class="faction-body">
+        <h3>反物质军团</h3>
+        <div class="faction-path">信奉 / 毁灭</div>
+        <p>纳努克麾下的毁灭大军，由「绝灭大君」各自统率。所过之处，文明化作白地，连星神也不愿多看一眼。</p>
+        <div class="faction-people">
+          <div class="fp-label">代表人物</div>
+          <div class="fp-list"><span class="person-chip static"><span class="person-av txt">✧</span><span>幻胧</span></span><span class="person-chip static"><span class="person-av txt">✧</span><span>铁墓</span></span><span class="person-chip static"><span class="person-av txt">✧</span><span>星啸</span></span><span class="person-chip static"><span class="person-av txt">✧</span><span>焚风</span></span><span class="person-chip static"><span class="person-av txt">✧</span><span>归寂</span></span></div>
+          
+        </div>
+      </div>
+    </article>
+    <article class="faction-card" style="transition-delay:270ms">
+      <div class="faction-sigil">❖</div>
+      <div class="faction-body">
+        <h3>「家族」</h3>
+        <div class="faction-path">信奉 / 同谐</div>
+        <p>匹诺康尼的统治者，以希佩之名邀万民共赴盛宴。美梦是馈赠，也是秩序最柔软的一种牢笼。</p>
+        <div class="faction-people">
+          <div class="fp-label">代表人物</div>
+          <div class="fp-list"><button class="person-chip" data-person="1313" title="查看 星期日 的资料">
+      <span class="person-av"><img src="assets/characters/1313.webp" alt="" loading="lazy"></span><span>星期日</span></button><button class="person-chip" data-person="1309" title="查看 知更鸟 的资料">
+      <span class="person-av"><img src="assets/characters/1309.webp" alt="" loading="lazy"></span><span>知更鸟</span></button><button class="person-chip" data-person="1312" title="查看 米沙 的资料">
+      <span class="person-av"><img src="assets/characters/1312.webp" alt="" loading="lazy"></span><span>米沙</span></button><button class="person-chip" data-aeon-person="harmony" title="查看星神画像">
+      <span class="person-av aeon"><img src="assets/aeons/harmony.webp" alt="" loading="lazy"></span><span>希佩</span></button></div>
+          
+        </div>
+      </div>
+    </article>
+    <article class="faction-card" style="transition-delay:270ms">
+      <div class="faction-sigil">✺</div>
+      <div class="faction-body">
+        <h3>假面愚者</h3>
+        <div class="faction-path">信奉 / 欢愉</div>
+        <p>信奉阿哈的「乐子人」。为了博星神一笑，他们可以掀翻整个银河的棋盘，也可以只是递来一根香蕉。</p>
+        <div class="faction-people">
+          <div class="fp-label">代表人物</div>
+          <div class="fp-list"><button class="person-chip" data-person="1306" title="查看 花火 的资料">
+      <span class="person-av"><img src="assets/characters/1306.webp" alt="" loading="lazy"></span><span>花火</span></button><button class="person-chip" data-person="1501" title="查看 火花 的资料">
+      <span class="person-av"><img src="assets/characters/1501.webp" alt="" loading="lazy"></span><span>火花</span></button><button class="person-chip" data-aeon-person="elation" title="查看星神画像">
+      <span class="person-av aeon"><img src="assets/aeons/elation.webp" alt="" loading="lazy"></span><span>阿哈</span></button></div>
+          
+        </div>
+      </div>
+    </article>
+    <article class="faction-card" style="transition-delay:270ms">
+      <div class="faction-sigil">✧</div>
+      <div class="faction-body">
+        <h3>天才俱乐部</h3>
+        <div class="faction-path">信奉 / 智识</div>
+        <p>博识尊亲自邀请的宇宙顶级天才，仅设 84 席。成员的成果足以改写文明，性格却大多难以共处。</p>
+        <div class="faction-people">
+          <div class="fp-label">代表人物</div>
+          <div class="fp-list"><button class="person-chip" data-person="1013" title="查看 黑塔 的资料">
+      <span class="person-av"><img src="assets/characters/1013.webp" alt="" loading="lazy"></span><span>黑塔</span></button><button class="person-chip" data-person="1401" title="查看 大黑塔 的资料">
+      <span class="person-av"><img src="assets/characters/1401.webp" alt="" loading="lazy"></span><span>大黑塔</span></button><button class="person-chip" data-person="1303" title="查看 阮•梅 的资料">
+      <span class="person-av"><img src="assets/characters/1303.webp" alt="" loading="lazy"></span><span>阮•梅</span></button><span class="person-chip static"><span class="person-av txt">✧</span><span>螺丝咕姆</span></span><span class="person-chip static"><span class="person-av txt">✧</span><span>赞达尔</span></span></div>
+          
+        </div>
+      </div>
+    </article>
+    <article class="faction-card" style="transition-delay:270ms">
+      <div class="faction-sigil">▣</div>
+      <div class="faction-body">
+        <h3>博识学会</h3>
+        <div class="faction-path">信奉 / 智识</div>
+        <p>隶属公司的学术机构，致力于把知识普及给众生——以及替天才俱乐部收拾实验现场。</p>
+        <div class="faction-people">
+          <div class="fp-label">代表人物</div>
+          <div class="fp-list"><button class="person-chip" data-person="1305" title="查看 真理医生 的资料">
+      <span class="person-av"><img src="assets/characters/1305.webp" alt="" loading="lazy"></span><span>真理医生</span></button><button class="person-chip" data-person="1009" title="查看 艾丝妲 的资料">
+      <span class="person-av"><img src="assets/characters/1009.webp" alt="" loading="lazy"></span><span>艾丝妲</span></button><button class="person-chip" data-aeon-person="erudition" title="查看星神画像">
+      <span class="person-av aeon"><img src="assets/aeons/erudition.webp" alt="" loading="lazy"></span><span>博识尊</span></button></div>
+          
+        </div>
+      </div>
+    </article>
+    <article class="faction-card" style="transition-delay:270ms">
+      <div class="faction-sigil">◇</div>
+      <div class="faction-body">
+        <h3>流光忆庭</h3>
+        <div class="faction-path">信奉 / 记忆</div>
+        <p>舍弃肉身、以忆质存续的组织。他们打捞宇宙的记忆，将其凝成可供命途行者使用的「光锥」。</p>
+        <div class="faction-people">
+          <div class="fp-label">代表人物</div>
+          <div class="fp-list"><button class="person-chip" data-person="1307" title="查看 黑天鹅 的资料">
+      <span class="person-av"><img src="assets/characters/1307.webp" alt="" loading="lazy"></span><span>黑天鹅</span></button><button class="person-chip" data-aeon-person="remembrance" title="查看星神画像">
+      <span class="person-av aeon"><img src="assets/aeons/remembrance.webp" alt="" loading="lazy"></span><span>浮黎</span></button><span class="person-chip static"><span class="person-av txt">✧</span><span>忆者</span></span></div>
+          
+        </div>
+      </div>
+    </article>
+    <article class="faction-card" style="transition-delay:270ms">
+      <div class="faction-sigil">◐</div>
+      <div class="faction-body">
+        <h3>混沌医师 · 自灭者</h3>
+        <div class="faction-path">信奉 / 虚无</div>
+        <p>不慎踏入Ⅸ的阴影者，或颓唐成自灭者，或以悬壶济世反抗虚无——若能证明「存在」并非虚无，或许就能把那位孤独的星神从黑潭中解放。</p>
+        <div class="faction-people">
+          <div class="fp-label">代表人物</div>
+          <div class="fp-list"><button class="person-chip" data-person="1308" title="查看 黄泉 的资料">
+      <span class="person-av"><img src="assets/characters/1308.webp" alt="" loading="lazy"></span><span>黄泉</span></button><span class="person-chip static"><span class="person-av txt">✧</span><span>慕榕</span></span><button class="person-chip" data-aeon-person="nihility" title="查看星神画像">
+      <span class="person-av aeon"><img src="assets/aeons/nihility.webp" alt="" loading="lazy"></span><span>Ⅸ</span></button></div>
+          
+        </div>
+      </div>
+    </article>
+    <article class="faction-card" style="transition-delay:270ms">
+      <div class="faction-sigil">❔</div>
+      <div class="faction-body">
+        <h3>虚构史学家</h3>
+        <div class="faction-path">信奉 / 神秘</div>
+        <p>星神迷思的使徒，致力于编造、混淆、抹消银河中的历史，决心把宇宙笼罩在迷雾里；「谜语人」则专事破坏语言的确定性。</p>
+        <div class="faction-people">
+          <div class="fp-label">代表人物</div>
+          <div class="fp-list"><button class="person-chip" data-person="1301" title="查看 加拉赫 的资料">
+      <span class="person-av"><img src="assets/characters/1301.webp" alt="" loading="lazy"></span><span>加拉赫</span></button><button class="person-chip" data-aeon-person="enigmata" title="查看星神画像">
+      <span class="person-av aeon"><img src="assets/aeons/enigmata.webp" alt="" loading="lazy"></span><span>迷思</span></button><span class="person-chip static"><span class="person-av txt">✧</span><span>谜语人</span></span></div>
+          
+        </div>
+      </div>
+    </article>
+    <article class="faction-card" style="transition-delay:270ms">
+      <div class="faction-sigil">✸</div>
+      <div class="faction-body">
+        <h3>虫群</h3>
+        <div class="faction-path">信奉 / 繁育</div>
+        <p>「虫皇」塔伊兹育罗斯的复制体军团，以繁育为唯一目的，如蝗虫般侵袭宇宙中各星球，最终被众神联手遏止。</p>
+        <div class="faction-people">
+          <div class="fp-label">代表人物</div>
+          <div class="fp-list"><button class="person-chip" data-aeon-person="propagation" title="查看星神画像">
+      <span class="person-av aeon"><img src="assets/aeons/propagation.webp" alt="" loading="lazy"></span><span>塔伊兹育罗斯</span></button><span class="person-chip static"><span class="person-av txt">✧</span><span>孳孽王虫</span></span><span class="person-chip static"><span class="person-av txt">✧</span><span>虫群</span></span></div>
+          
+        </div>
+      </div>
+    </article></div>
+  <div class="char-count" id="factionCount" data-static="1">— 当前显示 20 / 20 个势力 · 点击人物头像查看资料 —</div>
   <div class="next-hint reveal">
     <span>下一章</span>
     <p>想单独翻看这些面孔？<a href="characters.html">去「人物图鉴」按世界筛选 →</a></p>

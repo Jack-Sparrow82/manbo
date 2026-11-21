@@ -6,36 +6,7 @@
 <title>开拓航图 · 星穹世界观图鉴</title>
 <meta name="description" content="从黑塔空间站到二相乐园，星穹列车已停靠的六处世界。">
 <link rel="stylesheet" href="styles.css">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-<script>
-/* 图片路径兼容层：正常结构读 assets/ 子目录；若上传时图片被平铺到仓库根目录，自动回退 */
-(function(){
-  var FLAT = {
-    'assets/hero/1510.webp':'1510 (1).webp',
-    'assets/paths/Abundance.webp':'Abundance (2).webp',
-    'assets/paths/Destruction.webp':'Destruction (3).webp',
-    'assets/paths/Elation.webp':'Elation (4).webp',
-    'assets/paths/Erudition.webp':'Erudition (5).webp',
-    'assets/paths/Harmony.webp':'Harmony (6).webp',
-    'assets/paths/Hunt.webp':'Hunt (7).webp',
-    'assets/paths/Nihility.webp':'Nihility (8).webp',
-    'assets/paths/Preservation.webp':'Preservation (9).webp',
-    'assets/paths/Remembrance.webp':'Remembrance (10).webp'
-  };
-  function toFlat(src){
-    if (FLAT[src]) return FLAT[src];
-    var m = /^assets\/[^/]+\/(.+)$/.exec(src || '');
-    return m ? m[1] : null;
-  }
-  document.addEventListener('error', function(e){
-    var img = e.target;
-    if (!img || img.tagName !== 'IMG' || img.getAttribute('data-flat-tried')) return;
-    img.setAttribute('data-flat-tried','1');
-    var f = toFlat(img.getAttribute('src') || '');
-    if (f) img.src = f;
-  }, true);
-})();
-</script>
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
 </head>
 <body data-page="worlds">
 
@@ -76,7 +47,97 @@
 </section>
 
 <section class="section sub">
-  <div class="timeline" id="timeline"></div>
+  <article class="reading">
+  <h2>本章速览：一条关于文明韧性的航线</h2>
+<p>「开拓」在故事里不是观光，而是<strong>一次次把陷入困局的世界重新接回星轨</strong>。星穹列车沿银轨停靠的每一站，都藏着一种文明面对命运的方式：有人在寒潮里筑墙取暖，有人为长生付出代价，有人在美梦与自由之间做选择，也有人以千万次重复的计算守住一线希望。</p>
+<p>下方六张航图卡片按剧情版本顺序排列，从<strong>黑塔空间站</strong>的苏醒出发，经<strong>雅利洛-VI</strong>的冰封城塞、<strong>仙舟罗浮</strong>的长生之咒、<strong>匹诺康尼</strong>的梦境、<strong>翁法罗斯</strong>的轮回，抵达<strong>二相乐园</strong>的画布。每站都标注了版本、关键词与出场人物立绘，读者可以只靠文字读懂梗概，也可以顺着卡片里的名字回到人物图鉴查证。</p>
+<p>把六站连起来看，会发现一个共同点：环境可以极端，但人总在想办法把日子过下去。这也是本站在选题上希望呈现的、积极而克制的一面 —— 设定或许沉重，讲述它的语气不必如此。</p>
+</article>
+  <div class="timeline" id="timeline" data-static="1">
+    <div class="world-item  in">
+      <div class="world-card">
+        <div>
+          <div class="world-ver">STOP 01　·　序章 / 1.0</div>
+          <h3>黑塔空间站<span>湛蓝星 · 一切开始的地方</span></h3>
+          <div class="world-en">HERTA SPACE STATION</div>
+          <p>天才俱乐部第 83 席「黑塔」的私人研究设施，飘浮在湛蓝星轨道之上。开拓者在此苏醒，第一次与「星核」照面；也是「模拟宇宙」这场疯狂演算实验的所在地。</p>
+          <div class="world-tags"><span>天才俱乐部</span><span>星核</span><span>模拟宇宙</span><span>反物质军团</span></div>
+        </div>
+        <div class="world-faces">
+          <img src="assets/characters/1013.webp" alt="" loading="lazy"><img src="assets/characters/1401.webp" alt="" loading="lazy"><img src="assets/characters/1009.webp" alt="" loading="lazy"><img src="assets/characters/1303.webp" alt="" loading="lazy">
+        </div>
+      </div>
+    </div>
+    <div class="world-item  in">
+      <div class="world-card">
+        <div>
+          <div class="world-ver">STOP 02　·　1.0 — 1.1</div>
+          <h3>雅利洛-VI<span>被寒潮封锁七百年的星球</span></h3>
+          <div class="world-en">JARILO-VI</div>
+          <p>银轨中断于此。星核带来的无尽寒潮与「裂界」把文明压缩进最后一座城塞——贝洛伯格，上层筑墙取暖，下层在磐岩镇的黑暗里挖煤求生。存护的意志，在这里有了最具体的形状。</p>
+          <div class="world-tags"><span>贝洛伯格</span><span>下层区</span><span>寒潮</span><span>存护</span></div>
+        </div>
+        <div class="world-faces">
+          <img src="assets/characters/1101.webp" alt="" loading="lazy"><img src="assets/characters/1102.webp" alt="" loading="lazy"><img src="assets/characters/1104.webp" alt="" loading="lazy"><img src="assets/characters/1107.webp" alt="" loading="lazy">
+        </div>
+      </div>
+    </div>
+    <div class="world-item  in">
+      <div class="world-card">
+        <div>
+          <div class="world-ver">STOP 03　·　1.1 — 2.5</div>
+          <h3>仙舟「罗浮」<span>巡猎星槎，长生之咒</span></h3>
+          <div class="world-en">THE XIANZHOU LUOFU</div>
+          <p>追随「巡猎」星神岚航行的巨型星舰，六艘仙舟同列联盟。居民曾求长生而获「丰饶」赐福，却换来魔阴身与倏忽之孽；于是世代猎杀丰饶，也世代承受长生的代价。</p>
+          <div class="world-tags"><span>长生种</span><span>丰饶孽物</span><span>云上五骁</span><span>星槎海</span></div>
+        </div>
+        <div class="world-faces">
+          <img src="assets/characters/1204.webp" alt="" loading="lazy"><img src="assets/characters/1205.webp" alt="" loading="lazy"><img src="assets/characters/1213.webp" alt="" loading="lazy"><img src="assets/characters/1220.webp" alt="" loading="lazy"><img src="assets/characters/1502.webp" alt="" loading="lazy"><img src="assets/characters/1203.webp" alt="" loading="lazy">
+        </div>
+      </div>
+    </div>
+    <div class="world-item  in">
+      <div class="world-card">
+        <div>
+          <div class="world-ver">STOP 04　·　2.0 — 2.3</div>
+          <h3>匹诺康尼<span>盛会之星，永不醒来的梦</span></h3>
+          <div class="world-en">PENACONY</div>
+          <p>「家族」以同谐之名经营的度假星球，宾客在美梦中重获所求。然而梦境的底层埋着被抹去的「秩序」残响，以及一场关于「人是否该被幸福地圈养」的争论。</p>
+          <div class="world-tags"><span>盛会之星</span><span>梦境</span><span>家族</span><span>秩序</span></div>
+        </div>
+        <div class="world-faces">
+          <img src="assets/characters/1304.webp" alt="" loading="lazy"><img src="assets/characters/1306.webp" alt="" loading="lazy"><img src="assets/characters/1308.webp" alt="" loading="lazy"><img src="assets/characters/1309.webp" alt="" loading="lazy"><img src="assets/characters/1310.webp" alt="" loading="lazy"><img src="assets/characters/1313.webp" alt="" loading="lazy"><img src="assets/characters/1307.webp" alt="" loading="lazy">
+        </div>
+      </div>
+    </div>
+    <div class="world-item  in">
+      <div class="world-card">
+        <div>
+          <div class="world-ver">STOP 05　·　3.0 — 3.7</div>
+          <h3>翁法罗斯<span>逐火的永劫轮回</span></h3>
+          <div class="world-en">AMPHOREUS</div>
+          <p>十二泰坦、黄金裔与「再创世」史诗的舞台。真相是「智识」产物帝王权杖内部的演算世界：黑潮将至，绝灭大君「铁墓」即将破壳。白厄与昔涟以死循环困住它，而第 33550337 次轮回里，走进来一个真正的变数。</p>
+          <div class="world-tags"><span>十二泰坦</span><span>黄金裔</span><span>永劫回归</span><span>帝王权杖</span></div>
+        </div>
+        <div class="world-faces">
+          <img src="assets/characters/1408.webp" alt="" loading="lazy"><img src="assets/characters/1407.webp" alt="" loading="lazy"><img src="assets/characters/1415.webp" alt="" loading="lazy"><img src="assets/characters/1402.webp" alt="" loading="lazy"><img src="assets/characters/1413.webp" alt="" loading="lazy">
+        </div>
+      </div>
+    </div>
+    <div class="world-item">
+      <div class="world-card">
+        <div>
+          <div class="world-ver">STOP 06　·　4.0 — 4.6</div>
+          <h3>二相乐园<span>幻月之下，欢愉的画布</span></h3>
+          <div class="world-en">PLANARCADIA</div>
+          <p>又名「哈托彼亚」，姬子的故乡，也是星穹列车十五年前修复后再度启航之地。整个世界曾被绘师收入画卷以躲过毁灭军锋，如今由星际和平公司打捞、经营。幻月满盈时，「幻月游戏」将选出可暂借星神权能一分钟的胜者。</p>
+          <div class="world-tags"><span>幻月游戏</span><span>幻造</span><span>愿力</span><span>欢愉</span></div>
+        </div>
+        <div class="world-faces">
+          <img src="assets/characters/1510.webp" alt="" loading="lazy"><img src="assets/characters/1501.webp" alt="" loading="lazy"><img src="assets/characters/1503.webp" alt="" loading="lazy"><img src="assets/characters/1505.webp" alt="" loading="lazy"><img src="assets/characters/1504.webp" alt="" loading="lazy">
+        </div>
+      </div>
+    </div></div>
   <div class="next-hint reveal">
     <span>下一章</span>
     <p>世界里来来往往的不只是旅人，还有各自举着旗帜的阵营 —— <a href="factions.html">去「群星势力」看看 →</a></p>

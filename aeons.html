@@ -6,36 +6,7 @@
 <title>星神 · 命途 · 星穹世界观图鉴</title>
 <meta name="description" content="14 位官方已公布画像的星神、10 条主要命途与已陨落 / 失踪的旧日命途。">
 <link rel="stylesheet" href="styles.css">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-<script>
-/* 图片路径兼容层：正常结构读 assets/ 子目录；若上传时图片被平铺到仓库根目录，自动回退 */
-(function(){
-  var FLAT = {
-    'assets/hero/1510.webp':'1510 (1).webp',
-    'assets/paths/Abundance.webp':'Abundance (2).webp',
-    'assets/paths/Destruction.webp':'Destruction (3).webp',
-    'assets/paths/Elation.webp':'Elation (4).webp',
-    'assets/paths/Erudition.webp':'Erudition (5).webp',
-    'assets/paths/Harmony.webp':'Harmony (6).webp',
-    'assets/paths/Hunt.webp':'Hunt (7).webp',
-    'assets/paths/Nihility.webp':'Nihility (8).webp',
-    'assets/paths/Preservation.webp':'Preservation (9).webp',
-    'assets/paths/Remembrance.webp':'Remembrance (10).webp'
-  };
-  function toFlat(src){
-    if (FLAT[src]) return FLAT[src];
-    var m = /^assets\/[^/]+\/(.+)$/.exec(src || '');
-    return m ? m[1] : null;
-  }
-  document.addEventListener('error', function(e){
-    var img = e.target;
-    if (!img || img.tagName !== 'IMG' || img.getAttribute('data-flat-tried')) return;
-    img.setAttribute('data-flat-tried','1');
-    var f = toFlat(img.getAttribute('src') || '');
-    if (f) img.src = f;
-  }, true);
-})();
-</script>
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
 </head>
 <body data-page="aeons">
 
@@ -76,13 +47,173 @@
 </section>
 
 <section class="section sub">
+  <article class="reading">
+  <h2>本章速览：星神与命途是什么关系</h2>
+<p>星神并非传统意义上「管天管地」的神，而是<strong>把某一种理念走到极致、因而升格为宇宙尺度现象</strong>的存在。祂们所代表的方向被称为「命途」；凡人若长期顺着同一理念行事，便可能成为该命途的行者，其中极少数被星神直接注视者称作「令使」。</p>
+<p>本页收录 <span class="r-key">14 位官方已公布画像的星神</span>，按命途归类展示，点击任意画像可查看其身份、状态与简明介绍；下方另附 10 条主要命途的图标与说明，以及若干尚未单独展开的命途名称。画像与图标均为官方美术素材，文字说明为本站原创整理。</p>
+<p>需要说明的是：星神的「已陨落」「失踪」「不可知」都属于剧情设定，并非资料缺失。把这些状态一并列出，是为了让世界观的时间层次更清楚，也让后续势力与人物章节里的立场差异更容易理解。</p>
+</article>
   <div class="sub-head reveal">
     <div class="sub-kicker">OFFICIAL AEON PORTRAITS</div>
     <h2>官方已公布画像的 14 位星神</h2>
     <p>包括现任九位、已陨落或并入他途的两位，以及贪饕、均衡、神秘三位形态特殊的古老星神。「开拓」阿基维利与「纯美」伊德莉拉等星神，官方至今未公布画像，故不在此列。点击画像可放大查看。</p>
   </div>
-  <div class="aeon-grid" id="aeonGrid"></div>
-  <div class="aeon-count" id="aeonCount"></div>
+  <div class="aeon-grid" id="aeonGrid" data-static="1">
+    <button class="aeon-card  in" data-aeon="destruction" style="transition-delay:0ms" aria-label="查看星神 纳努克 的画像">
+      <div class="aeon-art">
+        <span class="aeon-halo"></span>
+        <img src="assets/aeons/destruction.webp" alt="纳努克 官方画像" loading="lazy">
+        <span class="aeon-status live">现存</span>
+      </div>
+      <div class="aeon-meta">
+        <span class="aeon-path">毁灭</span>
+        <h3>纳努克</h3>
+      </div>
+    </button>
+    <button class="aeon-card  in" data-aeon="preservation" style="transition-delay:55ms" aria-label="查看星神 克里珀 的画像">
+      <div class="aeon-art">
+        <span class="aeon-halo"></span>
+        <img src="assets/aeons/preservation.webp" alt="克里珀 官方画像" loading="lazy">
+        <span class="aeon-status live">现存</span>
+      </div>
+      <div class="aeon-meta">
+        <span class="aeon-path">存护</span>
+        <h3>克里珀</h3>
+      </div>
+    </button>
+    <button class="aeon-card  in" data-aeon="hunt" style="transition-delay:110ms" aria-label="查看星神 岚 的画像">
+      <div class="aeon-art">
+        <span class="aeon-halo"></span>
+        <img src="assets/aeons/hunt.webp" alt="岚 官方画像" loading="lazy">
+        <span class="aeon-status live">现存</span>
+      </div>
+      <div class="aeon-meta">
+        <span class="aeon-path">巡猎</span>
+        <h3>岚</h3>
+      </div>
+    </button>
+    <button class="aeon-card  in" data-aeon="abundance" style="transition-delay:165ms" aria-label="查看星神 药师 的画像">
+      <div class="aeon-art">
+        <span class="aeon-halo"></span>
+        <img src="assets/aeons/abundance.webp" alt="药师 官方画像" loading="lazy">
+        <span class="aeon-status live">现存</span>
+      </div>
+      <div class="aeon-meta">
+        <span class="aeon-path">丰饶</span>
+        <h3>药师</h3>
+      </div>
+    </button>
+    <button class="aeon-card  in" data-aeon="erudition" style="transition-delay:0ms" aria-label="查看星神 博识尊 的画像">
+      <div class="aeon-art">
+        <span class="aeon-halo"></span>
+        <img src="assets/aeons/erudition.webp" alt="博识尊 官方画像" loading="lazy">
+        <span class="aeon-status live">现存</span>
+      </div>
+      <div class="aeon-meta">
+        <span class="aeon-path">智识</span>
+        <h3>博识尊</h3>
+      </div>
+    </button>
+    <button class="aeon-card  in" data-aeon="harmony" style="transition-delay:55ms" aria-label="查看星神 希佩 的画像">
+      <div class="aeon-art">
+        <span class="aeon-halo"></span>
+        <img src="assets/aeons/harmony.webp" alt="希佩 官方画像" loading="lazy">
+        <span class="aeon-status live">现存</span>
+      </div>
+      <div class="aeon-meta">
+        <span class="aeon-path">同谐</span>
+        <h3>希佩</h3>
+      </div>
+    </button>
+    <button class="aeon-card  in" data-aeon="nihility" style="transition-delay:110ms" aria-label="查看星神 Ⅸ 的画像">
+      <div class="aeon-art">
+        <span class="aeon-halo"></span>
+        <img src="assets/aeons/nihility.webp" alt="Ⅸ 官方画像" loading="lazy">
+        <span class="aeon-status live">现存</span>
+      </div>
+      <div class="aeon-meta">
+        <span class="aeon-path">虚无</span>
+        <h3>Ⅸ</h3>
+      </div>
+    </button>
+    <button class="aeon-card  in" data-aeon="remembrance" style="transition-delay:165ms" aria-label="查看星神 浮黎 的画像">
+      <div class="aeon-art">
+        <span class="aeon-halo"></span>
+        <img src="assets/aeons/remembrance.webp" alt="浮黎 官方画像" loading="lazy">
+        <span class="aeon-status live">现存</span>
+      </div>
+      <div class="aeon-meta">
+        <span class="aeon-path">记忆</span>
+        <h3>浮黎</h3>
+      </div>
+    </button>
+    <button class="aeon-card  in" data-aeon="elation" style="transition-delay:0ms" aria-label="查看星神 阿哈 的画像">
+      <div class="aeon-art">
+        <span class="aeon-halo"></span>
+        <img src="assets/aeons/elation.webp" alt="阿哈 官方画像" loading="lazy">
+        <span class="aeon-status live">现存</span>
+      </div>
+      <div class="aeon-meta">
+        <span class="aeon-path">欢愉</span>
+        <h3>阿哈</h3>
+      </div>
+    </button>
+    <button class="aeon-card  in" data-aeon="propagation" style="transition-delay:55ms" aria-label="查看星神 塔伊兹育罗斯 的画像">
+      <div class="aeon-art">
+        <span class="aeon-halo"></span>
+        <img src="assets/aeons/propagation.webp" alt="塔伊兹育罗斯 官方画像" loading="lazy">
+        <span class="aeon-status gone">已陨</span>
+      </div>
+      <div class="aeon-meta">
+        <span class="aeon-path">繁育</span>
+        <h3>塔伊兹育罗斯</h3>
+      </div>
+    </button>
+    <button class="aeon-card  in" data-aeon="order" style="transition-delay:110ms" aria-label="查看星神 太一 的画像">
+      <div class="aeon-art">
+        <span class="aeon-halo"></span>
+        <img src="assets/aeons/order.webp" alt="太一 官方画像" loading="lazy">
+        <span class="aeon-status gone">已并入同谐</span>
+      </div>
+      <div class="aeon-meta">
+        <span class="aeon-path">秩序</span>
+        <h3>太一</h3>
+      </div>
+    </button>
+    <button class="aeon-card  in" data-aeon="voracity" style="transition-delay:165ms" aria-label="查看星神 奥博洛斯 的画像">
+      <div class="aeon-art">
+        <span class="aeon-halo"></span>
+        <img src="assets/aeons/voracity.webp" alt="奥博洛斯 官方画像" loading="lazy">
+        <span class="aeon-status gone">古老星神</span>
+      </div>
+      <div class="aeon-meta">
+        <span class="aeon-path">贪饕</span>
+        <h3>奥博洛斯</h3>
+      </div>
+    </button>
+    <button class="aeon-card  in" data-aeon="equilibrium" style="transition-delay:0ms" aria-label="查看星神 互 的画像">
+      <div class="aeon-art">
+        <span class="aeon-halo"></span>
+        <img src="assets/aeons/equilibrium.webp" alt="互 官方画像" loading="lazy">
+        <span class="aeon-status gone">形态不明</span>
+      </div>
+      <div class="aeon-meta">
+        <span class="aeon-path">均衡</span>
+        <h3>互</h3>
+      </div>
+    </button>
+    <button class="aeon-card  in" data-aeon="enigmata" style="transition-delay:55ms" aria-label="查看星神 迷思 的画像">
+      <div class="aeon-art">
+        <span class="aeon-halo"></span>
+        <img src="assets/aeons/enigmata.webp" alt="迷思 官方画像" loading="lazy">
+        <span class="aeon-status gone">形态不明</span>
+      </div>
+      <div class="aeon-meta">
+        <span class="aeon-path">神秘</span>
+        <h3>迷思</h3>
+      </div>
+    </button></div>
+  <div class="aeon-count" id="aeonCount" data-static="1">— 官方已公布画像的 14 位星神 · 点击画像查看资料 —</div>
 </section>
 
 <section class="section sub tight">
@@ -91,11 +222,101 @@
     <h2>旅途中的主要命途</h2>
     <p>凡人若践行同一种理念，便能得到星神遥远的「瞥视」，成为命途行者。</p>
   </div>
-  <div class="paths-grid" id="pathsGrid"></div>
+  <div class="paths-grid" id="pathsGrid" data-static="1">
+    <article class="path-card" style="transition-delay:0ms">
+      <span class="path-idx">01</span>
+      <img class="path-icon" src="assets/paths/Explore.webp" alt="开拓命途图标" loading="lazy">
+      <h3>开拓</h3>
+      <div class="path-aeon">「阿基维利」</div>
+      <p>连接世界，探索未知</p>
+      <div class="path-fallen">✦ 星神已陨落</div>
+      <div class="path-no-aeon">官方未公布画像</div>
+    </article>
+    <article class="path-card" style="transition-delay:60ms">
+      <span class="path-idx">02</span>
+      <img class="path-icon" src="assets/paths/Destruction.webp" alt="毁灭命途图标" loading="lazy">
+      <h3>毁灭</h3>
+      <div class="path-aeon">「纳努克」</div>
+      <p>宇宙是错误，文明需被修正</p>
+      
+      <button class="path-to-aeon" data-aeon="destruction">查看星神画像 →</button>
+    </article>
+    <article class="path-card" style="transition-delay:120ms">
+      <span class="path-idx">03</span>
+      <img class="path-icon" src="assets/paths/Preservation.webp" alt="存护命途图标" loading="lazy">
+      <h3>存护</h3>
+      <div class="path-aeon">「克里珀」</div>
+      <p>筑起高墙，隔绝一切灾厄</p>
+      
+      <button class="path-to-aeon" data-aeon="preservation">查看星神画像 →</button>
+    </article>
+    <article class="path-card" style="transition-delay:180ms">
+      <span class="path-idx">04</span>
+      <img class="path-icon" src="assets/paths/Hunt.webp" alt="巡猎命途图标" loading="lazy">
+      <h3>巡猎</h3>
+      <div class="path-aeon">「岚」</div>
+      <p>不死不休，猎杀丰饶孽物</p>
+      
+      <button class="path-to-aeon" data-aeon="hunt">查看星神画像 →</button>
+    </article>
+    <article class="path-card" style="transition-delay:240ms">
+      <span class="path-idx">05</span>
+      <img class="path-icon" src="assets/paths/Abundance.webp" alt="丰饶命途图标" loading="lazy">
+      <h3>丰饶</h3>
+      <div class="path-aeon">「药师」</div>
+      <p>无私赐予生命与治愈</p>
+      
+      <button class="path-to-aeon" data-aeon="abundance">查看星神画像 →</button>
+    </article>
+    <article class="path-card" style="transition-delay:0ms">
+      <span class="path-idx">06</span>
+      <img class="path-icon" src="assets/paths/Erudition.webp" alt="智识命途图标" loading="lazy">
+      <h3>智识</h3>
+      <div class="path-aeon">「博识尊」</div>
+      <p>求解宇宙的一切答案</p>
+      
+      <button class="path-to-aeon" data-aeon="erudition">查看星神画像 →</button>
+    </article>
+    <article class="path-card" style="transition-delay:60ms">
+      <span class="path-idx">07</span>
+      <img class="path-icon" src="assets/paths/Harmony.webp" alt="同谐命途图标" loading="lazy">
+      <h3>同谐</h3>
+      <div class="path-aeon">「希佩」</div>
+      <p>万物归一，共赴一场盛宴</p>
+      
+      <button class="path-to-aeon" data-aeon="harmony">查看星神画像 →</button>
+    </article>
+    <article class="path-card" style="transition-delay:120ms">
+      <span class="path-idx">08</span>
+      <img class="path-icon" src="assets/paths/Nihility.webp" alt="虚无命途图标" loading="lazy">
+      <h3>虚无</h3>
+      <div class="path-aeon">「Ⅸ」</div>
+      <p>一切终将归于寂静</p>
+      
+      <button class="path-to-aeon" data-aeon="nihility">查看星神画像 →</button>
+    </article>
+    <article class="path-card" style="transition-delay:180ms">
+      <span class="path-idx">09</span>
+      <img class="path-icon" src="assets/paths/Remembrance.webp" alt="记忆命途图标" loading="lazy">
+      <h3>记忆</h3>
+      <div class="path-aeon">「浮黎」</div>
+      <p>记下宇宙，不使其被遗忘</p>
+      
+      <button class="path-to-aeon" data-aeon="remembrance">查看星神画像 →</button>
+    </article>
+    <article class="path-card" style="transition-delay:240ms">
+      <span class="path-idx">10</span>
+      <img class="path-icon" src="assets/paths/Elation.webp" alt="欢愉命途图标" loading="lazy">
+      <h3>欢愉</h3>
+      <div class="path-aeon">「阿哈」</div>
+      <p>笑吧，世界不过一场游戏</p>
+      
+      <button class="path-to-aeon" data-aeon="elation">查看星神画像 →</button>
+    </article></div>
 
   <div class="other-paths reveal">
     <div class="other-title"><span>✧</span> 其他已知命途 <small>（含已陨落 / 未实装）</small></div>
-    <div class="other-list" id="otherPaths"></div>
+    <div class="other-list" id="otherPaths" data-static="1"><div class="other-chip"><b>繁育</b>塔伊兹育罗斯 · 已陨</div><div class="other-chip"><b>秩序</b>太一 · 已并入同谐</div><div class="other-chip"><b>纯美</b>伊德莉拉 · 失踪</div><div class="other-chip"><b>不朽</b>龙 · 已陨</div><div class="other-chip"><b>均衡</b>互</div><div class="other-chip"><b>终末</b>末王</div><div class="other-chip"><b>神秘</b>迷思</div><div class="other-chip"><b>贪饕</b>奥博洛斯 · 旧日星神</div></div>
   </div>
 
   <div class="concept-note reveal">

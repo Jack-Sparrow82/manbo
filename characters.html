@@ -6,36 +6,7 @@
 <title>人物图鉴 · 星穹世界观图鉴</title>
 <meta name="description" content="54 位《崩坏：星穹铁道》角色立绘与资料，可按所属世界筛选。">
 <link rel="stylesheet" href="styles.css">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-<script>
-/* 图片路径兼容层：正常结构读 assets/ 子目录；若上传时图片被平铺到仓库根目录，自动回退 */
-(function(){
-  var FLAT = {
-    'assets/hero/1510.webp':'1510 (1).webp',
-    'assets/paths/Abundance.webp':'Abundance (2).webp',
-    'assets/paths/Destruction.webp':'Destruction (3).webp',
-    'assets/paths/Elation.webp':'Elation (4).webp',
-    'assets/paths/Erudition.webp':'Erudition (5).webp',
-    'assets/paths/Harmony.webp':'Harmony (6).webp',
-    'assets/paths/Hunt.webp':'Hunt (7).webp',
-    'assets/paths/Nihility.webp':'Nihility (8).webp',
-    'assets/paths/Preservation.webp':'Preservation (9).webp',
-    'assets/paths/Remembrance.webp':'Remembrance (10).webp'
-  };
-  function toFlat(src){
-    if (FLAT[src]) return FLAT[src];
-    var m = /^assets\/[^/]+\/(.+)$/.exec(src || '');
-    return m ? m[1] : null;
-  }
-  document.addEventListener('error', function(e){
-    var img = e.target;
-    if (!img || img.tagName !== 'IMG' || img.getAttribute('data-flat-tried')) return;
-    img.setAttribute('data-flat-tried','1');
-    var f = toFlat(img.getAttribute('src') || '');
-    if (f) img.src = f;
-  }, true);
-})();
-</script>
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
 </head>
 <body data-page="characters">
 
@@ -76,9 +47,555 @@
 </section>
 
 <section class="section sub">
-  <div class="filter-bar reveal" id="filterBar"></div>
-  <div class="char-grid" id="charGrid"></div>
-  <div class="char-count" id="charCount"></div>
+  <article class="reading">
+  <h2>本章速览：怎样读这张人物图鉴</h2>
+<p>人物是设定落到纸面的最后一步。本站收录 <span class="r-key">54 位角色</span>，每张卡片给出姓名、命途、属性与星级，点击可展开包含立绘、阵营与简介的资料卡；顶部十组按钮按所属阵营／世界分组，方便从「这群人为什么站在一起」的角度检索。</p>
+<p>需要提醒的是：<strong>命途不等于职业</strong>，它更像一个人反复选择的处事方式；属性则是战斗体系里的元素分类。把两者与所属阵营放在一起看，往往能读出比单条简介更完整的人物关系。图鉴按剧情与阵营混合编排，顺序不代表强度排名。</p>
+<p>本章所有卡片、名称与说明均为静态文本，不依赖脚本即可阅读；筛选与弹窗只是阅读辅助，关掉也无损内容完整。立绘来自 StarRailRes 开源素材库，仅用于课程展示。</p>
+</article>
+  <div class="filter-bar " id="filterBar" data-static="1"><button class="filter-btn active" data-group="all">全部 <span style="opacity:.55">54</span></button><button class="filter-btn" data-group="train">列车组 <span style="opacity:.55">6</span></button><button class="filter-btn" data-group="hunter">星核猎手 <span style="opacity:.55">2</span></button><button class="filter-btn" data-group="station">空间站 <span style="opacity:.55">4</span></button><button class="filter-btn" data-group="jarilo">雅利洛-VI <span style="opacity:.55">4</span></button><button class="filter-btn" data-group="luofu">仙舟 <span style="opacity:.55">15</span></button><button class="filter-btn" data-group="penacony">匹诺康尼 <span style="opacity:.55">9</span></button><button class="filter-btn" data-group="amphoreus">翁法罗斯 <span style="opacity:.55">5</span></button><button class="filter-btn" data-group="arcadia">二相乐园 <span style="opacity:.55">4</span></button><button class="filter-btn" data-group="galaxy">星海群英 <span style="opacity:.55">5</span></button></div>
+  <div class="char-grid" id="charGrid" data-static="1">
+    <button class="char-card in" data-id="1001" style="transition-delay:0ms" aria-label="查看 三月七 的资料">
+      <div class="char-portrait">
+        <span class="char-rarity">★★★★</span>
+        <img src="assets/characters/1001.webp" alt="三月七 立绘" loading="lazy">
+      </div>
+      <div class="char-info">
+        <h4>三月七</h4>
+        <p>存护 · 冰</p>
+      </div>
+    </button>
+    <button class="char-card in" data-id="1002" style="transition-delay:26ms" aria-label="查看 丹恒 的资料">
+      <div class="char-portrait">
+        <span class="char-rarity">★★★★</span>
+        <img src="assets/characters/1002.webp" alt="丹恒 立绘" loading="lazy">
+      </div>
+      <div class="char-info">
+        <h4>丹恒</h4>
+        <p>巡猎 · 风</p>
+      </div>
+    </button>
+    <button class="char-card in" data-id="1003" style="transition-delay:52ms" aria-label="查看 姬子 的资料">
+      <div class="char-portrait">
+        <span class="char-rarity">★★★★★</span>
+        <img src="assets/characters/1003.webp" alt="姬子 立绘" loading="lazy">
+      </div>
+      <div class="char-info">
+        <h4>姬子</h4>
+        <p>智识 · 火</p>
+      </div>
+    </button>
+    <button class="char-card in" data-id="1004" style="transition-delay:78ms" aria-label="查看 瓦尔特 的资料">
+      <div class="char-portrait">
+        <span class="char-rarity">★★★★★</span>
+        <img src="assets/characters/1004.webp" alt="瓦尔特 立绘" loading="lazy">
+      </div>
+      <div class="char-info">
+        <h4>瓦尔特</h4>
+        <p>虚无 · 虚数</p>
+      </div>
+    </button>
+    <button class="char-card in" data-id="1313" style="transition-delay:104ms" aria-label="查看 星期日 的资料">
+      <div class="char-portrait">
+        <span class="char-rarity">★★★★★</span>
+        <img src="assets/characters/1313.webp" alt="星期日 立绘" loading="lazy">
+      </div>
+      <div class="char-info">
+        <h4>星期日</h4>
+        <p>同谐 · 虚数</p>
+      </div>
+    </button>
+    <button class="char-card in" data-id="1510" style="transition-delay:130ms" aria-label="查看 姬子·启行 的资料">
+      <div class="char-portrait">
+        <span class="char-rarity">★★★★★</span>
+        <img src="assets/characters/1510.webp" alt="姬子·启行 立绘" loading="lazy">
+      </div>
+      <div class="char-info">
+        <h4>姬子·启行</h4>
+        <p>智识 · 火</p>
+      </div>
+    </button>
+    <button class="char-card in" data-id="1005" style="transition-delay:156ms" aria-label="查看 卡芙卡 的资料">
+      <div class="char-portrait">
+        <span class="char-rarity">★★★★★</span>
+        <img src="assets/characters/1005.webp" alt="卡芙卡 立绘" loading="lazy">
+      </div>
+      <div class="char-info">
+        <h4>卡芙卡</h4>
+        <p>虚无 · 雷</p>
+      </div>
+    </button>
+    <button class="char-card in" data-id="1006" style="transition-delay:182ms" aria-label="查看 银狼 的资料">
+      <div class="char-portrait">
+        <span class="char-rarity">★★★★★</span>
+        <img src="assets/characters/1006.webp" alt="银狼 立绘" loading="lazy">
+      </div>
+      <div class="char-info">
+        <h4>银狼</h4>
+        <p>虚无 · 量子</p>
+      </div>
+    </button>
+    <button class="char-card in" data-id="1013" style="transition-delay:208ms" aria-label="查看 黑塔 的资料">
+      <div class="char-portrait">
+        <span class="char-rarity">★★★★</span>
+        <img src="assets/characters/1013.webp" alt="黑塔 立绘" loading="lazy">
+      </div>
+      <div class="char-info">
+        <h4>黑塔</h4>
+        <p>智识 · 冰</p>
+      </div>
+    </button>
+    <button class="char-card in" data-id="1401" style="transition-delay:234ms" aria-label="查看 大黑塔 的资料">
+      <div class="char-portrait">
+        <span class="char-rarity">★★★★★</span>
+        <img src="assets/characters/1401.webp" alt="大黑塔 立绘" loading="lazy">
+      </div>
+      <div class="char-info">
+        <h4>大黑塔</h4>
+        <p>智识 · 冰</p>
+      </div>
+    </button>
+    <button class="char-card in" data-id="1009" style="transition-delay:260ms" aria-label="查看 艾丝妲 的资料">
+      <div class="char-portrait">
+        <span class="char-rarity">★★★★</span>
+        <img src="assets/characters/1009.webp" alt="艾丝妲 立绘" loading="lazy">
+      </div>
+      <div class="char-info">
+        <h4>艾丝妲</h4>
+        <p>同谐 · 火</p>
+      </div>
+    </button>
+    <button class="char-card in" data-id="1303" style="transition-delay:286ms" aria-label="查看 阮•梅 的资料">
+      <div class="char-portrait">
+        <span class="char-rarity">★★★★★</span>
+        <img src="assets/characters/1303.webp" alt="阮•梅 立绘" loading="lazy">
+      </div>
+      <div class="char-info">
+        <h4>阮•梅</h4>
+        <p>同谐 · 冰</p>
+      </div>
+    </button>
+    <button class="char-card in" data-id="1101" style="transition-delay:312ms" aria-label="查看 布洛妮娅 的资料">
+      <div class="char-portrait">
+        <span class="char-rarity">★★★★★</span>
+        <img src="assets/characters/1101.webp" alt="布洛妮娅 立绘" loading="lazy">
+      </div>
+      <div class="char-info">
+        <h4>布洛妮娅</h4>
+        <p>同谐 · 风</p>
+      </div>
+    </button>
+    <button class="char-card in" data-id="1102" style="transition-delay:312ms" aria-label="查看 希儿 的资料">
+      <div class="char-portrait">
+        <span class="char-rarity">★★★★★</span>
+        <img src="assets/characters/1102.webp" alt="希儿 立绘" loading="lazy">
+      </div>
+      <div class="char-info">
+        <h4>希儿</h4>
+        <p>巡猎 · 量子</p>
+      </div>
+    </button>
+    <button class="char-card in" data-id="1104" style="transition-delay:312ms" aria-label="查看 杰帕德 的资料">
+      <div class="char-portrait">
+        <span class="char-rarity">★★★★★</span>
+        <img src="assets/characters/1104.webp" alt="杰帕德 立绘" loading="lazy">
+      </div>
+      <div class="char-info">
+        <h4>杰帕德</h4>
+        <p>存护 · 冰</p>
+      </div>
+    </button>
+    <button class="char-card in" data-id="1107" style="transition-delay:312ms" aria-label="查看 克拉拉 的资料">
+      <div class="char-portrait">
+        <span class="char-rarity">★★★★★</span>
+        <img src="assets/characters/1107.webp" alt="克拉拉 立绘" loading="lazy">
+      </div>
+      <div class="char-info">
+        <h4>克拉拉</h4>
+        <p>毁灭 · 物理</p>
+      </div>
+    </button>
+    <button class="char-card in" data-id="1203" style="transition-delay:312ms" aria-label="查看 罗刹 的资料">
+      <div class="char-portrait">
+        <span class="char-rarity">★★★★★</span>
+        <img src="assets/characters/1203.webp" alt="罗刹 立绘" loading="lazy">
+      </div>
+      <div class="char-info">
+        <h4>罗刹</h4>
+        <p>丰饶 · 虚数</p>
+      </div>
+    </button>
+    <button class="char-card in" data-id="1204" style="transition-delay:312ms" aria-label="查看 景元 的资料">
+      <div class="char-portrait">
+        <span class="char-rarity">★★★★★</span>
+        <img src="assets/characters/1204.webp" alt="景元 立绘" loading="lazy">
+      </div>
+      <div class="char-info">
+        <h4>景元</h4>
+        <p>智识 · 雷</p>
+      </div>
+    </button>
+    <button class="char-card in" data-id="1205" style="transition-delay:312ms" aria-label="查看 刃 的资料">
+      <div class="char-portrait">
+        <span class="char-rarity">★★★★★</span>
+        <img src="assets/characters/1205.webp" alt="刃 立绘" loading="lazy">
+      </div>
+      <div class="char-info">
+        <h4>刃</h4>
+        <p>毁灭 · 风</p>
+      </div>
+    </button>
+    <button class="char-card in" data-id="1206" style="transition-delay:312ms" aria-label="查看 素裳 的资料">
+      <div class="char-portrait">
+        <span class="char-rarity">★★★★</span>
+        <img src="assets/characters/1206.webp" alt="素裳 立绘" loading="lazy">
+      </div>
+      <div class="char-info">
+        <h4>素裳</h4>
+        <p>巡猎 · 物理</p>
+      </div>
+    </button>
+    <button class="char-card in" data-id="1207" style="transition-delay:312ms" aria-label="查看 驭空 的资料">
+      <div class="char-portrait">
+        <span class="char-rarity">★★★★</span>
+        <img src="assets/characters/1207.webp" alt="驭空 立绘" loading="lazy">
+      </div>
+      <div class="char-info">
+        <h4>驭空</h4>
+        <p>同谐 · 虚数</p>
+      </div>
+    </button>
+    <button class="char-card in" data-id="1211" style="transition-delay:312ms" aria-label="查看 白露 的资料">
+      <div class="char-portrait">
+        <span class="char-rarity">★★★★★</span>
+        <img src="assets/characters/1211.webp" alt="白露 立绘" loading="lazy">
+      </div>
+      <div class="char-info">
+        <h4>白露</h4>
+        <p>丰饶 · 雷</p>
+      </div>
+    </button>
+    <button class="char-card in" data-id="1212" style="transition-delay:312ms" aria-label="查看 镜流 的资料">
+      <div class="char-portrait">
+        <span class="char-rarity">★★★★★</span>
+        <img src="assets/characters/1212.webp" alt="镜流 立绘" loading="lazy">
+      </div>
+      <div class="char-info">
+        <h4>镜流</h4>
+        <p>毁灭 · 冰</p>
+      </div>
+    </button>
+    <button class="char-card in" data-id="1213" style="transition-delay:312ms" aria-label="查看 丹恒·饮月 的资料">
+      <div class="char-portrait">
+        <span class="char-rarity">★★★★★</span>
+        <img src="assets/characters/1213.webp" alt="丹恒·饮月 立绘" loading="lazy">
+      </div>
+      <div class="char-info">
+        <h4>丹恒·饮月</h4>
+        <p>毁灭 · 虚数</p>
+      </div>
+    </button>
+    <button class="char-card in" data-id="1214" style="transition-delay:312ms" aria-label="查看 雪衣 的资料">
+      <div class="char-portrait">
+        <span class="char-rarity">★★★★</span>
+        <img src="assets/characters/1214.webp" alt="雪衣 立绘" loading="lazy">
+      </div>
+      <div class="char-info">
+        <h4>雪衣</h4>
+        <p>毁灭 · 量子</p>
+      </div>
+    </button>
+    <button class="char-card in" data-id="1215" style="transition-delay:312ms" aria-label="查看 寒鸦 的资料">
+      <div class="char-portrait">
+        <span class="char-rarity">★★★★</span>
+        <img src="assets/characters/1215.webp" alt="寒鸦 立绘" loading="lazy">
+      </div>
+      <div class="char-info">
+        <h4>寒鸦</h4>
+        <p>同谐 · 物理</p>
+      </div>
+    </button>
+    <button class="char-card in" data-id="1217" style="transition-delay:312ms" aria-label="查看 藿藿 的资料">
+      <div class="char-portrait">
+        <span class="char-rarity">★★★★★</span>
+        <img src="assets/characters/1217.webp" alt="藿藿 立绘" loading="lazy">
+      </div>
+      <div class="char-info">
+        <h4>藿藿</h4>
+        <p>丰饶 · 风</p>
+      </div>
+    </button>
+    <button class="char-card in" data-id="1218" style="transition-delay:312ms" aria-label="查看 椒丘 的资料">
+      <div class="char-portrait">
+        <span class="char-rarity">★★★★★</span>
+        <img src="assets/characters/1218.webp" alt="椒丘 立绘" loading="lazy">
+      </div>
+      <div class="char-info">
+        <h4>椒丘</h4>
+        <p>虚无 · 火</p>
+      </div>
+    </button>
+    <button class="char-card in" data-id="1220" style="transition-delay:312ms" aria-label="查看 飞霄 的资料">
+      <div class="char-portrait">
+        <span class="char-rarity">★★★★★</span>
+        <img src="assets/characters/1220.webp" alt="飞霄 立绘" loading="lazy">
+      </div>
+      <div class="char-info">
+        <h4>飞霄</h4>
+        <p>巡猎 · 风</p>
+      </div>
+    </button>
+    <button class="char-card in" data-id="1222" style="transition-delay:312ms" aria-label="查看 灵砂 的资料">
+      <div class="char-portrait">
+        <span class="char-rarity">★★★★★</span>
+        <img src="assets/characters/1222.webp" alt="灵砂 立绘" loading="lazy">
+      </div>
+      <div class="char-info">
+        <h4>灵砂</h4>
+        <p>丰饶 · 火</p>
+      </div>
+    </button>
+    <button class="char-card" data-id="1502" style="transition-delay:312ms" aria-label="查看 爻光 的资料">
+      <div class="char-portrait">
+        <span class="char-rarity">★★★★★</span>
+        <img src="assets/characters/1502.webp" alt="爻光 立绘" loading="lazy">
+      </div>
+      <div class="char-info">
+        <h4>爻光</h4>
+        <p>欢愉 · 物理</p>
+      </div>
+    </button>
+    <button class="char-card" data-id="1301" style="transition-delay:312ms" aria-label="查看 加拉赫 的资料">
+      <div class="char-portrait">
+        <span class="char-rarity">★★★★</span>
+        <img src="assets/characters/1301.webp" alt="加拉赫 立绘" loading="lazy">
+      </div>
+      <div class="char-info">
+        <h4>加拉赫</h4>
+        <p>丰饶 · 火</p>
+      </div>
+    </button>
+    <button class="char-card" data-id="1302" style="transition-delay:312ms" aria-label="查看 银枝 的资料">
+      <div class="char-portrait">
+        <span class="char-rarity">★★★★★</span>
+        <img src="assets/characters/1302.webp" alt="银枝 立绘" loading="lazy">
+      </div>
+      <div class="char-info">
+        <h4>银枝</h4>
+        <p>智识 · 物理</p>
+      </div>
+    </button>
+    <button class="char-card" data-id="1304" style="transition-delay:312ms" aria-label="查看 砂金 的资料">
+      <div class="char-portrait">
+        <span class="char-rarity">★★★★★</span>
+        <img src="assets/characters/1304.webp" alt="砂金 立绘" loading="lazy">
+      </div>
+      <div class="char-info">
+        <h4>砂金</h4>
+        <p>存护 · 虚数</p>
+      </div>
+    </button>
+    <button class="char-card" data-id="1305" style="transition-delay:312ms" aria-label="查看 真理医生 的资料">
+      <div class="char-portrait">
+        <span class="char-rarity">★★★★★</span>
+        <img src="assets/characters/1305.webp" alt="真理医生 立绘" loading="lazy">
+      </div>
+      <div class="char-info">
+        <h4>真理医生</h4>
+        <p>巡猎 · 虚数</p>
+      </div>
+    </button>
+    <button class="char-card" data-id="1306" style="transition-delay:312ms" aria-label="查看 花火 的资料">
+      <div class="char-portrait">
+        <span class="char-rarity">★★★★★</span>
+        <img src="assets/characters/1306.webp" alt="花火 立绘" loading="lazy">
+      </div>
+      <div class="char-info">
+        <h4>花火</h4>
+        <p>同谐 · 量子</p>
+      </div>
+    </button>
+    <button class="char-card" data-id="1307" style="transition-delay:312ms" aria-label="查看 黑天鹅 的资料">
+      <div class="char-portrait">
+        <span class="char-rarity">★★★★★</span>
+        <img src="assets/characters/1307.webp" alt="黑天鹅 立绘" loading="lazy">
+      </div>
+      <div class="char-info">
+        <h4>黑天鹅</h4>
+        <p>虚无 · 风</p>
+      </div>
+    </button>
+    <button class="char-card" data-id="1308" style="transition-delay:312ms" aria-label="查看 黄泉 的资料">
+      <div class="char-portrait">
+        <span class="char-rarity">★★★★★</span>
+        <img src="assets/characters/1308.webp" alt="黄泉 立绘" loading="lazy">
+      </div>
+      <div class="char-info">
+        <h4>黄泉</h4>
+        <p>虚无 · 雷</p>
+      </div>
+    </button>
+    <button class="char-card" data-id="1309" style="transition-delay:312ms" aria-label="查看 知更鸟 的资料">
+      <div class="char-portrait">
+        <span class="char-rarity">★★★★★</span>
+        <img src="assets/characters/1309.webp" alt="知更鸟 立绘" loading="lazy">
+      </div>
+      <div class="char-info">
+        <h4>知更鸟</h4>
+        <p>同谐 · 物理</p>
+      </div>
+    </button>
+    <button class="char-card" data-id="1310" style="transition-delay:312ms" aria-label="查看 流萤 的资料">
+      <div class="char-portrait">
+        <span class="char-rarity">★★★★★</span>
+        <img src="assets/characters/1310.webp" alt="流萤 立绘" loading="lazy">
+      </div>
+      <div class="char-info">
+        <h4>流萤</h4>
+        <p>毁灭 · 火</p>
+      </div>
+    </button>
+    <button class="char-card" data-id="1312" style="transition-delay:312ms" aria-label="查看 米沙 的资料">
+      <div class="char-portrait">
+        <span class="char-rarity">★★★★</span>
+        <img src="assets/characters/1312.webp" alt="米沙 立绘" loading="lazy">
+      </div>
+      <div class="char-info">
+        <h4>米沙</h4>
+        <p>毁灭 · 冰</p>
+      </div>
+    </button>
+    <button class="char-card" data-id="1314" style="transition-delay:312ms" aria-label="查看 翡翠 的资料">
+      <div class="char-portrait">
+        <span class="char-rarity">★★★★★</span>
+        <img src="assets/characters/1314.webp" alt="翡翠 立绘" loading="lazy">
+      </div>
+      <div class="char-info">
+        <h4>翡翠</h4>
+        <p>智识 · 量子</p>
+      </div>
+    </button>
+    <button class="char-card" data-id="1315" style="transition-delay:312ms" aria-label="查看 波提欧 的资料">
+      <div class="char-portrait">
+        <span class="char-rarity">★★★★★</span>
+        <img src="assets/characters/1315.webp" alt="波提欧 立绘" loading="lazy">
+      </div>
+      <div class="char-info">
+        <h4>波提欧</h4>
+        <p>巡猎 · 物理</p>
+      </div>
+    </button>
+    <button class="char-card" data-id="1317" style="transition-delay:312ms" aria-label="查看 乱破 的资料">
+      <div class="char-portrait">
+        <span class="char-rarity">★★★★★</span>
+        <img src="assets/characters/1317.webp" alt="乱破 立绘" loading="lazy">
+      </div>
+      <div class="char-info">
+        <h4>乱破</h4>
+        <p>智识 · 虚数</p>
+      </div>
+    </button>
+    <button class="char-card" data-id="1112" style="transition-delay:312ms" aria-label="查看 托帕&amp;账账 的资料">
+      <div class="char-portrait">
+        <span class="char-rarity">★★★★★</span>
+        <img src="assets/characters/1112.webp" alt="托帕&amp;账账 立绘" loading="lazy">
+      </div>
+      <div class="char-info">
+        <h4>托帕&amp;账账</h4>
+        <p>巡猎 · 火</p>
+      </div>
+    </button>
+    <button class="char-card" data-id="1402" style="transition-delay:312ms" aria-label="查看 阿格莱雅 的资料">
+      <div class="char-portrait">
+        <span class="char-rarity">★★★★★</span>
+        <img src="assets/characters/1402.webp" alt="阿格莱雅 立绘" loading="lazy">
+      </div>
+      <div class="char-info">
+        <h4>阿格莱雅</h4>
+        <p>记忆 · 雷</p>
+      </div>
+    </button>
+    <button class="char-card" data-id="1407" style="transition-delay:312ms" aria-label="查看 遐蝶 的资料">
+      <div class="char-portrait">
+        <span class="char-rarity">★★★★★</span>
+        <img src="assets/characters/1407.webp" alt="遐蝶 立绘" loading="lazy">
+      </div>
+      <div class="char-info">
+        <h4>遐蝶</h4>
+        <p>记忆 · 量子</p>
+      </div>
+    </button>
+    <button class="char-card" data-id="1408" style="transition-delay:312ms" aria-label="查看 白厄 的资料">
+      <div class="char-portrait">
+        <span class="char-rarity">★★★★★</span>
+        <img src="assets/characters/1408.webp" alt="白厄 立绘" loading="lazy">
+      </div>
+      <div class="char-info">
+        <h4>白厄</h4>
+        <p>毁灭 · 物理</p>
+      </div>
+    </button>
+    <button class="char-card" data-id="1413" style="transition-delay:312ms" aria-label="查看 长夜月 的资料">
+      <div class="char-portrait">
+        <span class="char-rarity">★★★★★</span>
+        <img src="assets/characters/1413.webp" alt="长夜月 立绘" loading="lazy">
+      </div>
+      <div class="char-info">
+        <h4>长夜月</h4>
+        <p>记忆 · 冰</p>
+      </div>
+    </button>
+    <button class="char-card" data-id="1415" style="transition-delay:312ms" aria-label="查看 昔涟 的资料">
+      <div class="char-portrait">
+        <span class="char-rarity">★★★★★</span>
+        <img src="assets/characters/1415.webp" alt="昔涟 立绘" loading="lazy">
+      </div>
+      <div class="char-info">
+        <h4>昔涟</h4>
+        <p>记忆 · 冰</p>
+      </div>
+    </button>
+    <button class="char-card" data-id="1501" style="transition-delay:312ms" aria-label="查看 火花 的资料">
+      <div class="char-portrait">
+        <span class="char-rarity">★★★★★</span>
+        <img src="assets/characters/1501.webp" alt="火花 立绘" loading="lazy">
+      </div>
+      <div class="char-info">
+        <h4>火花</h4>
+        <p>欢愉 · 火</p>
+      </div>
+    </button>
+    <button class="char-card" data-id="1503" style="transition-delay:312ms" aria-label="查看 真珠 的资料">
+      <div class="char-portrait">
+        <span class="char-rarity">★★★★★</span>
+        <img src="assets/characters/1503.webp" alt="真珠 立绘" loading="lazy">
+      </div>
+      <div class="char-info">
+        <h4>真珠</h4>
+        <p>欢愉 · 冰</p>
+      </div>
+    </button>
+    <button class="char-card" data-id="1504" style="transition-delay:312ms" aria-label="查看 不死途 的资料">
+      <div class="char-portrait">
+        <span class="char-rarity">★★★★★</span>
+        <img src="assets/characters/1504.webp" alt="不死途 立绘" loading="lazy">
+      </div>
+      <div class="char-info">
+        <h4>不死途</h4>
+        <p>巡猎 · 雷</p>
+      </div>
+    </button>
+    <button class="char-card" data-id="1505" style="transition-delay:312ms" aria-label="查看 绯英 的资料">
+      <div class="char-portrait">
+        <span class="char-rarity">★★★★★</span>
+        <img src="assets/characters/1505.webp" alt="绯英 立绘" loading="lazy">
+      </div>
+      <div class="char-info">
+        <h4>绯英</h4>
+        <p>欢愉 · 物理</p>
+      </div>
+    </button></div>
+  <div class="char-count" id="charCount" data-static="1">— 共 54 位角色 · 点击卡片查看资料 —</div>
   <div class="next-hint reveal">
     <span>下一章</span>
     <p>读到最后，把那些绕口的专有名词一次理清 —— <a href="glossary.html">去「术语辞典」→</a></p>
